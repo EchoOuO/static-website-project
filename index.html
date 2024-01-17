@@ -3,23 +3,146 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Exercise-2024-01-03</title>
-        <style>
-            div{
-                display: flex;
-                border: solid 1px black;
-                background-color: navajowhite;
-            }
-            
-            .DIV2{
-                background-color: lightblue;
-            }
-
-        </style>
+        <title>Joe Yang | Freelance Frontend Developer </title>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="main.css">
     </head>
     <body>
-        <div class="DIV1">DIV 1</div>
-        <div class="DIV2">DIV 22222222</div>
-        <div class="DIV3">DIV 3</div>
+        <!-- Nav START -->
+        <nav id="navigation">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#skill">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li> 
+            </ul>
+        </nav>
+        <!-- Nav END -->
+
+        <!-- Header START -->
+        <header id="about">
+            <h1>Welcome!</h1>
+            <p>I'm Joe Yang.</p>
+            <p>A Freelance Frontend Developer</p>
+            <a href="#service">FIND OUT MORE</a>
+        </header>
+        <!-- Header END -->
+
+        <!-- Service START -->
+        <section class="section-service" id="service">
+            <h3>At Your Service</h3>
+            <div>
+                <img src="./assets/icons/project1.png" alt=""></img>
+                <h4>Service 1</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quis.</p>
+            </div>
+            <div>
+                <img src="./assets/icons/project2.png" alt=""></img>
+                <h4>Service 2</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, est.</p>
+            </div>
+            <div>
+                <img src="./assets/icons/project3.png" alt=""></img>
+                <h4>Service 3</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, est.</p>
+            </div>
+            <div>
+                <img src="./assets/icons/project4.png" alt=""></img>
+                <h4>Service 4</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, est.</p>
+            </div>
+        </section>
+        <!-- Service END -->
+
+        <!-- Skills START -->
+        <section class="section-skill" id="skill">
+            <h3>Skills</h3>
+            <div class="service-area">
+                <div class="skill-all skill1">
+                    <img src="./assets/icons/skill1.png" alt="">
+                </div>
+                <div class="skill-all skill2">
+                    <img src="./assets/icons/skill2.png" alt="">
+                </div>
+                <div class="skill-all skill3">
+                    <img src="./assets/icons/skill3.png" alt="">
+                </div>
+                <div class="skill-all skill4">
+                    <img src="./assets/icons/skill4.png" alt="">
+                </div>
+                <div class="skill-all skill5">
+                    <img src="./assets/icons/skill5.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills END -->
+
+        <!-- Portfolio START -->
+        <section class="section-portfolio" id="portfolio">
+            <div id="project1" class="project">
+                <p class="project-title">Category 1</p>
+                <p class="project-detail">Project 1</p>
+            </div>
+            <div id="project2" class="project">
+                <p class="project-title">Category 2 </p>
+                <p class="project-detail">Project 2</p>
+            </div>
+            <div id="project3" class="project">
+                <p class="project-title">Category 3</p>
+                <p class="project-detail">Project 3</p>
+            </div>
+            <div id="project4" class="project">
+                <p class="project-title">Category 4</p>
+                <p class="project-detail">Project 4</p>
+            </div>
+            <div id="project5" class="project">
+                <p class="project-title">Category 5</p>
+                <p class="project-detail">Project 5</p>
+            </div>
+            <div id="project6" class="project">
+                <p class="project-title">Category 6</p>
+                <p class="project-detail">Project 6</p>
+            </div>
+        </section>
+        <!-- Portfolio END -->
+
+        <!-- Contact START -->
+        <section class="section-contact" id="contact">
+            <h3>Let's Get In Touch!</h3>
+            <p>Ready to start your next project with me? <span>Send me a message</span> and I will get back to you as soon as possible!</p>
+            <form action=""></form>
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="E-mail">
+                <input type="number" placeholder="Phone Number +x (xxx) xxx-xxxx">
+                <textarea name="message" id="message" required placeholder="Anything Want To Say" ></textarea>
+            <button class="button-submit" tpye="submit">Submit</button>
+            <p>or</p>
+            <div class="contact-method">
+                <div>
+                    <img src="./assets/icons/phone.png" alt="" class="icon-phone">
+                    <p>+1 (236) 865-1317</p>
+                </div>
+                <div>
+                    <img src="./assets/icons/email.png" alt="" class="icon-email">
+                    <p><a href="thyang.joe@gmail.com">thyang.joe@gmail.com</a></p>
+                </div>
+            </div>
+        </section>
+        <!-- Contact END -->
+
+        <!-- Footer START -->
+        <footer>
+            <p>Copyright © 2024 - Joe Yang</p>
+        </footer>
+        <!-- Footer END -->
+
+        <!-- Back to Top -->
+        <div class="backbutton">
+            <a href="#navigation">TOP</a>
+        </div>
     </body>
 </html>
