@@ -18,8 +18,7 @@
     scroll-behavior: smooth;
 }
 
-p,a,textarea,input,
-section > div {
+p,a,textarea,input {
     font-family: var(--font-family-head-nav);
     font-weight: 300;
 }
@@ -30,7 +29,6 @@ nav > ul li a {
 }
 
 button,
-button a,
 header a,
 .backbutton a {
     font-family: var(--font-family-body);
@@ -41,7 +39,7 @@ header a,
 }
 
 button {
-    padding: 1.5rem 2rem 1.5rem 2rem;
+    padding: 1rem 2rem 1rem 2rem;
     border-radius: 30px;
     transition: 0.25s;
     cursor: pointer;
@@ -51,14 +49,17 @@ button {
 .button-submit {
     background-color: rgba(244, 98, 58, 0.75);
     width: 40%;
+    font-size: 1rem;
 }
 
 button:hover{
     background-color: rgb(197, 58, 20)
 }
 
+/* ------ */
+
 nav {
-    background-color: var(--color-light);
+    background-color: var(--color-primary);
 }
 
 nav ul {
@@ -81,7 +82,9 @@ nav li a {
 }
 
 nav li a:hover {
-    color: var(--color-primary);
+    color: var(--color-light);
+    text-decoration: underline;
+    scale: 1.15;
 }
 
 /* ------ */
@@ -133,8 +136,13 @@ header p {
 header a {
     background-color: var(--color-primary);
     text-decoration: none;
-    padding: 1.5rem 2rem 1.5rem 2rem;
+    padding: 1rem 2rem 1rem 2rem;
     border-radius: 30px;
+    transition: 0.25s;
+}
+
+header a:hover {
+    background-color: rgb(197, 58, 20)
 }
 
 /* ------ */
@@ -204,7 +212,7 @@ header a {
     margin-bottom: 1rem;
 }
 
-.service-area {
+.skill-area {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -337,7 +345,8 @@ header a {
 }
 
 .section-contact > p {
-    width: 80%;
+    width: 90%;
+    min-width: 30rem;
     text-align: center;
 }
 

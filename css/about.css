@@ -1,0 +1,367 @@
+:root {
+    --color-primary: rgb(244, 98, 58);
+    --color-light-primary:rgb(255, 183, 164);
+    --color-light: #f8f9fa;
+    --color-dark: #212529;
+    --color-gray: #d8d8d8;
+    --font-family-head-nav: Merriweather, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --font-family-body: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+*,
+*::before {
+    /* border: solid 1px black; */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+p,a,textarea,input,
+section > div,
+li {
+    font-family: var(--font-family-head-nav);
+    font-weight: 300;
+}
+
+h1,h2,h3,h4,h5,h6,
+nav > ul li a {
+    font-family: var(--font-family-body);
+}
+
+button,
+button a,
+header a,
+.backbutton a,
+.section-education-experience a{
+    font-family: var(--font-family-body);
+    font-weight: 900;
+    text-decoration: none;
+    color: var(--color-light);
+    text-transform: uppercase;
+}
+
+button {
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 30px;
+    transition: 0.25s;
+    cursor: pointer;
+    border: none;
+}
+
+
+/* ------ */
+
+nav {
+    background-color: var(--color-primary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+}
+
+nav li a {
+    color: var(--color-dark);
+    text-decoration: none;
+    transition: 0.2s;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+nav li a:hover {
+    color: var(--color-light);
+    text-decoration: underline;
+    scale: 1.15;
+}
+
+/* ------ */
+
+header {
+    /* width: 80%; */
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    height: 41rem;
+    /* background-color: rgba(136, 73, 14, 0.75); */
+    background-color: rgba(71, 39, 0, 0.8);
+    padding: 2rem;
+}
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0%;
+        right: 0%;
+        background-image: url(../assets/imgs/bg-masthead.jpg);
+        background-size: cover;
+        background-position: top center;
+        opacity: 0.75;
+        z-index: -1;
+        height: 44.5rem;
+    }
+
+
+/* 要注意不要寫成 header h1,img,p,button，這會讓其他地方的 img p button都吃到 */
+header h1,
+header p,
+header a {
+    margin: 0.7rem;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+}
+
+header img {
+    width: 20rem;
+    height: auto;
+    box-shadow: 10px 10px var(--color-light-primary);
+    border-radius: 10%;
+    /* margin-right: 6rem; */
+}
+
+.about-area {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    min-width: 30rem;
+}
+
+.about-area h1 {
+    color: var(--color-light);
+    font-size: 5rem;
+}
+
+.about-area p {
+    color: var(--color-gray);
+}
+
+.about-area a {
+    background-color: var(--color-primary);
+    text-decoration: none;
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 30px;
+    text-align: center;
+    width: 50%;
+}
+
+.about-area a:hover {
+    background-color: rgb(197, 58, 20)
+}
+
+
+.about-summary p {
+    font-size: 1.2rem;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-light);
+    margin-bottom: 1rem;
+}
+
+
+
+/* ------ */
+
+.section-skill {
+    background-color: rgb(235, 194, 183);
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.section-skill h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.skill-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.skill-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7.5rem;
+    height: 7.5rem;
+    /* border: solid 1px red; */
+    border-radius: 100%;
+    background-color: var(--color-gray);
+}
+
+.section-skill img {
+    width: 5rem;
+    height: 5rem;
+    transition: 0.2s;
+}
+
+
+.section-skill img:hover {
+    transform: scale(1.15);
+}
+
+/* ------ */
+
+.section-education-experience {
+    margin-bottom: 3rem;
+    padding-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 70%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 3rem;
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column; */
+    /* align-items: center; */
+}
+
+.section-education-experience img {
+    /* float: left; */
+    width: 10rem;
+    height: 100%;
+    /* margin-left: 18%;
+    margin-right: 3rem; */
+}
+
+.section-education-experience h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section-education-experience h4 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+.section-education-experience h6 {
+    color: var(--color-gray);
+}
+
+/* .section-education-experience ul li {
+    transform: translateX(2%);
+} */
+
+.section-education-experience a {
+    background-color: var(--color-primary);
+    text-decoration: none;
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 30px;
+    text-align: center;
+    width: 30%;
+}
+
+.section-education-experience a:hover {
+    background-color: rgb(197, 58, 20)
+}
+
+.education {
+    width: 80%;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.education div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.education ul li {
+    transform: translateX(5%);
+    min-width: 25rem;
+}
+
+
+/* ------ */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    background-color: lightgray;
+}
+
+footer p {
+    text-align: center;
+}
+
+/* ------ */
+
+.backbutton {
+    position: fixed;
+    display: flex;
+    background-color: var(--color-primary);
+    width: 3rem;
+    height: 3rem;
+    bottom: 10%;
+    right: 1%;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.5;
+    transition:0.3s;
+}
+
+/* ------ */
+
+.backbutton a {
+    text-decoration: none;
+}
+
+.backbutton:hover {
+    opacity: 1;
+}
+
+/* ------ */
+
+@media (max-width: 1024px) {
+    header img {
+        display: none;
+    }
+
+    .about-area {
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .education {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .about-area,
+    .education h4,
+    .education h6,
+    .education p {
+        text-align: center;
+    }
+}
+
