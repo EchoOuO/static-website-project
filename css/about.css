@@ -1,3 +1,4 @@
+/* set up common variable, color / font-family */
 :root {
     --color-primary: rgb(244, 98, 58);
     --color-light-primary:rgb(255, 183, 164);
@@ -8,7 +9,8 @@
     --font-family-body: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-
+/* set up global properties, box-sizing / font related / make margin & padding = 0 / button related */
+/* to make similar elements uniform & change style easier */
 *,
 *::before {
     /* border: solid 1px black; */
@@ -50,8 +52,10 @@ button {
     border: none;
 }
 
+/* -- Nivagation bar -- */
 
-/* ------ */
+/* 1. arrange layout by flexbox */
+/* 2. add link & hover effect */
 
 nav {
     background-color: var(--color-primary);
@@ -82,10 +86,14 @@ nav li a:hover {
     scale: 1.15;
 }
 
-/* ------ */
+/* -- Header -- */
+
+/* 1. arrange layout by flexbox */
+/* 2. to make it easier to change color style and read the word,
+add background images to header::before & background color to header */
+/* 3. RWD: remove portrait & about-area text-align: center */
 
 header {
-    /* width: 80%; */
     position: relative;
     display: flex;
     justify-content: space-evenly;
@@ -93,7 +101,6 @@ header {
     flex-wrap: wrap;
     gap: 3rem;
     height: 41rem;
-    /* background-color: rgba(136, 73, 14, 0.75); */
     background-color: rgba(71, 39, 0, 0.8);
     padding: 2rem;
 }
@@ -114,7 +121,6 @@ header {
     }
 
 
-/* 要注意不要寫成 header h1,img,p,button，這會讓其他地方的 img p button都吃到 */
 header h1,
 header p,
 header a {
@@ -128,7 +134,6 @@ header img {
     height: auto;
     box-shadow: 10px 10px var(--color-light-primary);
     border-radius: 10%;
-    /* margin-right: 6rem; */
 }
 
 .about-area {
@@ -169,9 +174,11 @@ header img {
     margin-bottom: 1rem;
 }
 
+/* -- Skill -- */
 
-
-/* ------ */
+/* 1. arrange layout by flexbox */
+/* 2. add hover effect */
+/* 3. RWD: flex-wrap: wrap */
 
 .section-skill {
     background-color: rgb(235, 194, 183);
@@ -199,7 +206,6 @@ header img {
     align-items: center;
     width: 7.5rem;
     height: 7.5rem;
-    /* border: solid 1px red; */
     border-radius: 100%;
     background-color: var(--color-gray);
 }
@@ -215,7 +221,12 @@ header img {
     transform: scale(1.15);
 }
 
-/* ------ */
+/* -- Education -- */
+
+/* 1. arrange layout by flexbox */
+/* 2. RWD: flex-wrap: wrap & text-align: center */
+
+/* how to arrange layout by float?? */
 
 .section-education-experience {
     margin-bottom: 3rem;
@@ -223,24 +234,11 @@ header img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* width: 70%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 3rem;
-    padding-top: 2.5rem;
-    padding-bottom: 3rem;
-    display: flex;
-    flex-direction: column; */
-    /* align-items: center; */
 }
 
 .section-education-experience img {
-    /* float: left; */
     width: 10rem;
     height: 100%;
-    /* margin-left: 18%;
-    margin-right: 3rem; */
 }
 
 .section-education-experience h3 {
@@ -258,10 +256,6 @@ header img {
     color: var(--color-gray);
 }
 
-/* .section-education-experience ul li {
-    transform: translateX(2%);
-} */
-
 .section-education-experience a {
     background-color: var(--color-primary);
     text-decoration: none;
@@ -269,6 +263,7 @@ header img {
     border-radius: 30px;
     text-align: center;
     width: 30%;
+    min-width: 20rem; 
 }
 
 .section-education-experience a:hover {
@@ -295,8 +290,9 @@ header img {
     min-width: 25rem;
 }
 
+/* -- Footer -- */
 
-/* ------ */
+/* 1. arrange layout by flexbox */
 
 footer {
     display: flex;
@@ -310,7 +306,10 @@ footer p {
     text-align: center;
 }
 
-/* ------ */
+/* -- Back to Top button -- */
+
+/* 1. flexbox & position: fixed */
+/* 2. add link & hover effect */
 
 .backbutton {
     position: fixed;
@@ -328,8 +327,6 @@ footer p {
     transition:0.3s;
 }
 
-/* ------ */
-
 .backbutton a {
     text-decoration: none;
 }
@@ -338,7 +335,7 @@ footer p {
     opacity: 1;
 }
 
-/* ------ */
+/* -- RWD -- */
 
 @media (max-width: 1024px) {
     header img {
@@ -348,7 +345,6 @@ footer p {
     .about-area {
         align-items: center;
     }
-
 }
 
 @media (max-width: 600px) {

@@ -1,3 +1,4 @@
+/* set up common variable, color / font-family */
 :root {
     --color-primary: rgb(244, 98, 58);
     --color-light-primary:rgb(255, 183, 164);
@@ -8,7 +9,8 @@
     --font-family-body: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-
+/* set up global properties, box-sizing / font related / make margin & padding = 0 / button related */
+/* to make similar elements uniform & change style easier */
 *,
 *::before {
     /* border: solid 1px black; */
@@ -23,7 +25,7 @@ p,a,textarea,input {
     font-weight: 300;
 }
 
-h1,h3,h4,
+h1,h2,h3,h4,h5,h6,
 nav > ul li a {
     font-family: var(--font-family-body);
 }
@@ -56,7 +58,10 @@ button:hover{
     background-color: rgb(197, 58, 20)
 }
 
-/* ------ */
+/* -- Nivagation bar -- */
+
+/* 1. arrange layout by flexbox */
+/* 2. add link & hover effect */
 
 nav {
     background-color: var(--color-primary);
@@ -87,7 +92,12 @@ nav li a:hover {
     scale: 1.15;
 }
 
-/* ------ */
+/* -- Header -- */
+
+/* 1. arrange layout by flexbox */
+/* 2. to make it easier to change color style and read the word,
+add background images to header::before & background color to header */
+
 
 header {
     position: relative;
@@ -96,7 +106,6 @@ header {
     justify-content: center;
     align-items: center;
     height: 41rem;
-    /* overflow: hidden; */
     background-color: rgba(71, 39, 0, 0.5);
 }
 
@@ -111,12 +120,10 @@ header {
         background-size: cover;
         background-position: top center;
         opacity: 0.75;
-        z-index: -1;
+        z-index: -1;  /* to not block navigation bar */
         height: 44rem;
     }
 
-
-/* 要注意不要寫成 header h1,img,p,button，這會讓其他地方的 img p button都吃到 */
 header h1,
 header img,
 header p,
@@ -145,15 +152,20 @@ header a:hover {
     background-color: rgb(197, 58, 20)
 }
 
-/* ------ */
+/* -- Service -- */
+
+/* 1. arrange layout by flexbox */
+/* 2. make each service width = 25% & title h3 width = 100%*/
+/* 3. add hover effect */
+/* 4. RWD: make each service width = 50% or 100% */
 
 .section-service {
+    width: 80%;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    width: 80%;
     flex-wrap: wrap;
     padding-bottom: 3rem;
     padding-top: 5rem;
@@ -183,12 +195,6 @@ header a:hover {
     padding: 0.7rem;
 }
 
-.section-service div:hover {
-    border: solid var(--color-primary) 0.5px;
-    transform:translateY(-5%);
-    box-shadow: 0.5rem 0.5rem var(--color-light-primary);
-}
-
 .section-service div p {
     color: var(--color-gray);
     font-weight: 300;
@@ -198,7 +204,18 @@ header a:hover {
     width: 4rem;
 }
 
-/* ------ */
+/* how to make <p> change color ??? */
+.section-service div:hover {
+    border: solid var(--color-primary) 0.5px;
+    transform:translateY(-5%);
+    box-shadow: 0.5rem 0.5rem var(--color-light-primary);
+}
+
+/* -- Skill -- */
+
+/* 1. arrange layout by flexbox */
+/* 2. add hover effect */
+/* 3. RWD: flex-wrap: wrap */
 
 .section-skill {
     /* background-color: var(--color-light-primary); */
@@ -226,7 +243,6 @@ header a:hover {
     align-items: center;
     width: 7.5rem;
     height: 7.5rem;
-    /* border: solid 1px red; */
     border-radius: 100%;
     background-color: var(--color-gray);
 }
@@ -242,7 +258,13 @@ header a:hover {
     transform: scale(1.15);
 }
 
-/* ------ */
+/* -- Portfolio -- */
+
+/* 1. arrange layout by flexbox, set each project width = 33.3333% */
+/* 2. add background images to each project::before & background color to each project*/
+/* 3. adjust z-index : project:before > <p> > project */
+/* 4. set up hover: project:hover::before */
+/* 5. RWD: set each project width = 50% / 100% */
 
 .section-portfolio {
     display: flex;
@@ -258,7 +280,6 @@ header a:hover {
 
 .project-title {
     color: var(--color-gray);
-    opacity: 1;
     font-size: 1.2rem;
     font-weight: 500;
     z-index: 1;
@@ -266,19 +287,18 @@ header a:hover {
 
 .project-detail {
     color: var(--color-light);
-    opacity: 1;
     font-size: 2rem;
     font-weight: 500;
     z-index: 1;
 }
 
 .project {
+    width: 33.33333%;
+    height: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 33.33333%;
-    height: 20rem;
     position: relative;
     background-color: var(--color-primary);
     transition: 0.5s;
@@ -287,19 +307,25 @@ header a:hover {
 }
 
 .project::before {
-    content: '';
-    position: absolute;
+    content: '';  /* no text */
+
+    /* to make img filled in without impact layout */
+    /* make parent : position: relative */
+    position: absolute;  
     top: 0px;
     bottom: 0px;
     left: 0px;
     right: 0px;
-    background-size: cover;
+
+    /* to make img fully filled in, will change the ratio of img */
+    /* scale img to the smallest possible size to fill the container */
+    background-size: cover;  
     background-position: top center;
-    opacity: 1;
     z-index: 2;
     transition: 0.5s;
 }
 
+/* add background img */
 #project1::before{
     background-image: url(./assets/imgs/portfolio/fullsize/1.jpg);
 }
@@ -324,12 +350,14 @@ header a:hover {
     background-image: url(./assets/imgs/portfolio/fullsize/6.jpg);
 }
 
-
 .project:hover::before{
     opacity: 0.15;
 }
 
-/* ------ */
+/* -- Contact -- */
+
+/* 1. arrange layout by flexbox */
+/* 2. set up input and button */
 
 .section-contact {
     display: flex;
@@ -362,7 +390,7 @@ header a:hover {
     padding: 1rem;
     font-size: 1rem;
     border-radius: 7px;
-    border: solid var(--color-gray) 0.5px
+    border: solid var(--color-gray) 0.5px;
 }
 
 .section-contact textarea {
@@ -375,7 +403,7 @@ header a:hover {
     padding-top: 0.5rem;
     font-size: 1rem;
     border-radius: 7px;
-    border: solid var(--color-gray) 0.5px
+    border: solid var(--color-gray) 0.5px;
 }
 
 .contact-method {
@@ -415,7 +443,9 @@ header a:hover {
 }
 
 
-/* ------ */
+/* -- Footer -- */
+
+/* 1. arrange layout by flexbox */
 
 footer {
     display: flex;
@@ -429,7 +459,10 @@ footer p {
     text-align: center;
 }
 
-/* ------ */
+/* -- Back to Top button -- */
+
+/* 1. flexbox & position: fixed */
+/* 2. add link & hover effect */
 
 .backbutton {
     position: fixed;
@@ -447,8 +480,6 @@ footer p {
     transition:0.3s;
 }
 
-/* ------ */
-
 .backbutton a {
     text-decoration: none;
 }
@@ -457,7 +488,7 @@ footer p {
     opacity: 1;
 }
 
-/* ------ */
+/* -- RWD -- */
 
 @media (max-width: 1024px) {
     .section-service div {
@@ -468,7 +499,6 @@ footer p {
     }
 }
 
-/* 不能放在 .section-service div 這段前面，會蓋不過去! */
 @media (max-width: 600px) {
     .section-service div {
         width: 100%;
