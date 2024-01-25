@@ -5,6 +5,12 @@
     --color-light: #f8f9fa;
     --color-dark: #212529;
     --color-gray: #d8d8d8;
+    --color-pic-cover-main: rgba(71, 39, 0, 0.5);
+    --color-pic-cover-about: rgba(71, 39, 0, 0.8);
+    --color-button: rgba(244, 98, 58, 0.75);
+    --color-button-hover: rgb(197, 58, 20);
+    --color-header-a-hover: rgb(197, 58, 20);
+    --color-footer: lightgray ;
     --font-family-head-nav: Merriweather, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     --font-family-body: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -19,6 +25,7 @@
     padding: 0;
     scroll-behavior: smooth;
 }
+
 
 p,a,textarea,input,
 section > div,
@@ -83,7 +90,13 @@ nav li a {
 nav li a:hover {
     color: var(--color-light);
     text-decoration: underline;
-    scale: 1.15;
+    transform: scale(1.15);
+}
+
+#nav-about {
+    color: var(--color-light);
+    text-decoration: underline;
+    transform: scale(1.15);
 }
 
 /* -- Header -- */
@@ -100,8 +113,8 @@ header {
     align-items: center;
     flex-wrap: wrap;
     gap: 3rem;
-    height: 41rem;
-    background-color: rgba(71, 39, 0, 0.8);
+    height: 54rem;
+    background-color: var(--color-pic-cover-about);
     padding: 2rem;
 }
 
@@ -117,7 +130,7 @@ header {
         background-position: top center;
         opacity: 0.75;
         z-index: -1;
-        height: 44.5rem;
+        height: 57rem;
     }
 
 
@@ -125,7 +138,7 @@ header h1,
 header p,
 header a {
     margin: 0.7rem;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     word-spacing: 4px;
 }
 
@@ -162,7 +175,7 @@ header img {
 }
 
 .about-area a:hover {
-    background-color: rgb(197, 58, 20)
+    background-color: var(--color-button-hover);
 }
 
 
@@ -299,7 +312,7 @@ footer {
     justify-content: center;
     align-items: center;
     height: 5rem;
-    background-color: lightgray;
+    background-color: var(--color-footer)
 }
 
 footer p {
@@ -344,6 +357,7 @@ footer p {
 
     .about-area {
         align-items: center;
+        text-align: center;
     }
 }
 
@@ -353,7 +367,6 @@ footer p {
         gap: 0.5rem;
     }
 
-    .about-area,
     .education h4,
     .education h6,
     .education p {
