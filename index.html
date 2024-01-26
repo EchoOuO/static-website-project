@@ -17,31 +17,46 @@
     <!-- from Dougal: it's more common to have : nav bar in header and the welcome part in another section -->
 
     <section>
-        <!-- Navigation bar START -->
-        <nav id="navigation">
-            <ul>
-                <li><a href="./pages/about.html">About Me</a></li>
-                <li><a href="#service">Service</a></li>
-                <li><a href="#skill">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <!-- Navigation bar END -->
-
         <!-- Header START -->
         <header>
-            <h1>Welcome!</h1>
-            <p>I'm Joe Yang.</p>
-            <p>A Freelance Frontend Developer</p>
-            <a href="#service">FIND OUT MORE</a>
+            <!-- Navigation bar START -->
+            <nav id="navigation">
+                <ul class="nav-main">
+                    <li><a href="./pages/about.html">About Me</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#skill">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <svg class="svg-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <ul class="nav-hamburger">
+                    <li><a href="./pages/about.html">About Me</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#skill">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Navigation bar END -->
+
+            <div class="cover">
+                <h1>Welcome!</h1>
+                <p class="cover-p-1">I'm Joe Yang.</p>
+                <p class="cover-p-2">A Freelance Frontend Developer.</p>
+                <a href="#service">At your service</a>
+            </div>
         </header>
         <!-- Header END -->
     </section>
 
     <!-- Service START -->
     <section class="section-service" id="service">
-        <h3>At Your Service</h3>
+        <h3>Always Welcome</h3>
         <div>
             <img src="./assets/icons/project1.png" alt="">
             <h4>Service 1</h4>
@@ -91,6 +106,7 @@
 
     <!-- Portfolio START -->
     <section class="section-portfolio" id="portfolio">
+        <h3>My Portfolio</h3>
         <div id="project1" class="project">
             <p class="project-title">Category 1</p>
             <p class="project-detail">Project 1</p>

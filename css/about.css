@@ -1,7 +1,7 @@
 /* set up common variable, color / font-family */
 :root {
     --color-primary: rgb(244, 98, 58);
-    --color-light-primary:rgb(255, 183, 164);
+    --color-light-primary: rgb(255, 183, 164);
     --color-light: #f8f9fa;
     --color-dark: #212529;
     --color-gray: #d8d8d8;
@@ -10,7 +10,7 @@
     --color-button: rgba(244, 98, 58, 0.75);
     --color-button-hover: rgb(197, 58, 20);
     --color-header-a-hover: rgb(197, 58, 20);
-    --color-footer: lightgray ;
+    --color-footer: lightgray;
     --font-family-head-nav: Merriweather, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     --font-family-body: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -27,28 +27,37 @@
 }
 
 
-p,a,textarea,input,
-section > div,
+p,
+a,
+textarea,
+input,
+section>div,
 li {
     font-family: var(--font-family-head-nav);
     font-weight: 300;
 }
 
-h1,h2,h3,h4,h5,h6,
-nav > ul li a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav>ul li a {
     font-family: var(--font-family-body);
 }
 
 button,
 button a,
-header a,
+.cover a,
 .backbutton a,
-.section-education-experience a{
+.section-education-experience a {
     font-family: var(--font-family-body);
     font-weight: 900;
     text-decoration: none;
     color: var(--color-light);
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 button {
@@ -65,21 +74,25 @@ button {
 /* 2. add link & hover effect */
 
 nav {
-    background-color: var(--color-primary);
+    /* background-color: var(--color-primary); */
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 2;
 }
 
 nav ul {
     display: flex;
     list-style: none;
     text-decoration: none;
-    gap: 2rem;
+    gap: 5%;
     justify-content: center;
     align-items: center;
     height: 3rem;
 }
 
 nav li a {
-    color: var(--color-dark);
+    color: var(--color-primary);
     text-decoration: none;
     transition: 0.2s;
     display: block;
@@ -106,54 +119,81 @@ nav li a:hover {
 add background images to header::before & background color to header */
 /* 3. RWD: remove portrait & about-area text-align: center */
 
-header {
+.cover {
     position: relative;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     gap: 3rem;
-    height: 54rem;
+    height: 44rem;
     background-color: var(--color-pic-cover-about);
     padding: 2rem;
 }
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0px;
-        bottom: 0px;
-        left: 0%;
-        right: 0%;
-        background-image: url(../assets/imgs/bg-masthead.jpg);
-        background-size: cover;
-        background-position: top center;
-        opacity: 0.75;
-        z-index: -1;
-        height: 57rem;
-    }
+&::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0%;
+    right: 0%;
+    background-image: url(../assets/imgs/bg-masthead.jpg);
+    background-size: cover;
+    background-position: top center;
+    opacity: 0.75;
+    z-index: -1;
+    height: 44rem;
+}
 
 
-header h1,
-header p,
-header a {
+.cover h1,
+.cover p,
+.cover a {
     margin: 0.7rem;
     letter-spacing: 1px;
     word-spacing: 4px;
 }
 
-header img {
+.cover img {
     width: 20rem;
     height: auto;
     box-shadow: 10px 10px var(--color-light-primary);
     border-radius: 10%;
+    animation: cover-img 1.2s forwards;
 }
+
+@keyframes cover-img {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
 
 .about-area {
     display: flex;
     flex-direction: column;
     width: 50%;
     min-width: 30rem;
+    animation: cover-about-area 1.5s forwards;
+}
+
+@keyframes cover-about-area {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
 
 .about-area h1 {
@@ -186,6 +226,7 @@ header img {
     color: var(--color-light);
     margin-bottom: 1rem;
 }
+
 
 /* -- Skill -- */
 
@@ -276,7 +317,7 @@ header img {
     border-radius: 30px;
     text-align: center;
     width: 30%;
-    min-width: 20rem; 
+    min-width: 20rem;
 }
 
 .section-education-experience a:hover {
@@ -330,14 +371,14 @@ footer p {
     background-color: var(--color-primary);
     width: 3rem;
     height: 3rem;
-    bottom: 10%;
+    bottom: 13%;
     right: 1%;
     border-radius: 100%;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     opacity: 0.5;
-    transition:0.3s;
+    transition: 0.3s;
 }
 
 .backbutton a {
@@ -373,4 +414,3 @@ footer p {
         text-align: center;
     }
 }
-
