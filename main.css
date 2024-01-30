@@ -19,7 +19,7 @@
 /* to make similar elements uniform & change style easier */
 *,
 *::before {
-    border: solid 1px black;
+    /* border: solid 1px black; */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -73,6 +73,7 @@ button:hover {
     background-color: var(--color-button-hover);
 }
 
+
 /* -- Nivagation bar -- */
 
 /* 1. arrange layout by flexbox */
@@ -94,6 +95,75 @@ nav {
     justify-content: center;
     align-items: center;
     height: 3rem;
+    transition: 0.4s;
+}
+
+.nav-main a {
+    color: var(--color-light);
+    text-decoration: none;
+    transition: 0.2s;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.nav-main a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+    transform: scale(1.15);
+}
+
+.menu {
+    width: 50px;
+    height: 50px;
+    /* border: solid 1px var(--color-light); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    margin-top: 10px;
+}
+
+.menu-line1,
+.menu-line2,
+.menu-line3 {
+    width: 40px;
+    height: 4px;
+    background-color: var(--color-light);
+    transition: 0.5s;
+}
+
+.menu-line1 {
+    transform: translateY(-200%);
+}
+
+.menu-line2 {
+    transform: translateY(0%);
+}
+
+.menu-line3 {
+    transform: translateY(200%);
+}
+
+.menu:hover {
+    .menu-line1 {
+        transform: translateX(-32.5%) translateY(50%) rotate(45deg);
+        width: 60%;
+    }
+
+    .menu-line2 {
+        display: none;
+    }
+
+    .menu-line3 {
+        transform: translateX(32.5%) translateY(-50%) rotate(-45deg);
+        width: 60%;
+    }
 }
 
 /* 缺JS把menu展開 */
@@ -116,32 +186,6 @@ nav {
     text-align: center;
     font-size: 2rem;
     padding-bottom: 2rem;
-}
-
-nav li a {
-    color: var(--color-primary);
-    text-decoration: none;
-    transition: 0.2s;
-    display: block;
-    height: 100%;
-    width: 100%;
-}
-
-nav li a:hover {
-    color: var(--color-light);
-    text-decoration: underline;
-    transform: scale(1.15);
-}
-
-.svg-menu {
-    width: 3rem;
-    height: 3rem;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: none;
-    color: var(--color-light);
 }
 
 
@@ -301,49 +345,80 @@ header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding-bottom: 3rem;
-    padding-top: 5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 3rem;
 }
 
 .section-service h3 {
     width: 100%;
     font-size: 2rem;
     margin-bottom: 1rem;
+    position: relative;
 }
 
 .section-service h4 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    color: var(--color-primary);
 }
 
 .section-service h3,
-.section-service div {
+.service {
     text-align: center;
     margin-bottom: 1.5rem;
 }
 
-.section-service div {
+.section-service h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 330px;
+    height: 20px;
+    background-color: var(--color-primary);
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.service {
     width: 25%;
     border-radius: 10px;
     transition: 0.3s;
     padding: 0.7rem;
 }
 
-.section-service div p {
+.service-p {
     color: var(--color-gray);
     font-weight: 300;
+    text-align: ;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(20%);
+    margin-bottom: 1rem;
 }
 
-.section-service div img {
-    width: 4rem;
+.service img {
+    width: 5rem;
 }
 
 /* how to make <p> change color ??? */
-.section-service div:hover {
+/* 壞了 */
+.service:hover {
     border: solid var(--color-primary) 0.5px;
     transform: translateY(-5%);
     box-shadow: 0.5rem 0.5rem var(--color-light-primary);
+
+    .service-p {
+        color: var(--color-dark);
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
+
 
 /* -- Skill -- */
 
@@ -360,7 +435,23 @@ header {
 .section-skill h3 {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.section-skill h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 110px;
+    height: 20px;
+    background-color: var(--color-primary);
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: 5px;
 }
 
 .skill-area {
@@ -369,21 +460,23 @@ header {
     align-items: center;
     gap: 2rem;
     flex-wrap: wrap;
+    margin-top: 1rem;
 }
 
 .skill-all {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 7.5rem;
-    height: 7.5rem;
+    width: 6rem;
+    height: 6rem;
     border-radius: 100%;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
     background-color: var(--color-gray);
 }
 
 .section-skill img {
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     transition: 0.2s;
 }
 
@@ -405,17 +498,31 @@ header {
     justify-content: center;
     width: 100%;
     flex-wrap: wrap;
-    padding-top: 2rem;
+    padding-top: 1rem;
+    margin-bottom: 3rem;
 }
 
 .section-portfolio h3 {
     width: 100%;
     text-align: center;
     font-size: 2rem;
-    /* margin-bottom: 1rem; */
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    background-color: var(--color-light-primary);
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.section-portfolio h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 220px;
+    height: 20px;
+    background-color: var(--color-primary);
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: 5px;
 }
 
 .section-portfolio>div>p {
@@ -509,12 +616,27 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    padding-top: 3rem;
     margin-bottom: 3rem;
 }
 
 .section-contact h3 {
     font-size: 2rem;
+    position: relative;
+}
+
+.section-contact h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 320px;
+    height: 20px;
+    background-color: var(--color-primary);
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: 5px;
 }
 
 .section-contact>p {
@@ -650,15 +772,22 @@ footer p {
         width: 100%;
     }
 
+    .service-p {
+        opacity: 1;
+        color: var(--color-dark);
+    }
+
     .section-portfolio div {
         width: 100%;
     }
 
     .nav-main {
-        display: none;
+        opacity: 0;
+        gap: 0%;
     }
 
-    .svg-menu {
-        display: block;
+    .menu {
+        display: flex;
     }
+
 }
