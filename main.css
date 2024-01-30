@@ -202,13 +202,12 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 44rem;
+    height: 100vh;
     background-color: var(--color-pic-cover-main);
 }
 
 &::before {
     content: '';
-    /* or float */
     position: absolute;
     top: 0rem;
     bottom: 0px;
@@ -217,10 +216,10 @@ header {
     background-image: url(./assets/imgs/bg-masthead.jpg);
     background-size: cover;
     background-position: top center;
-    opacity: 0.75;
+    opacity: 1;
     z-index: -1;
     /* to not block navigation bar */
-    height: 44rem;
+    height: 100vh;
 }
 
 .cover {
@@ -347,6 +346,7 @@ header {
     flex-wrap: wrap;
     padding-bottom: 0.5rem;
     padding-top: 3rem;
+    background-color: white;
 }
 
 .section-service h3 {
@@ -393,7 +393,7 @@ header {
 .service-p {
     color: var(--color-gray);
     font-weight: 300;
-    text-align: ;
+    text-align: center;
     letter-spacing: 1px;
     opacity: 0;
     transition: 0.5s;
@@ -430,6 +430,7 @@ header {
     /* background-color: var(--color-light-primary); */
     padding-top: 1rem;
     padding-bottom: 5rem;
+    background-color: white;
 }
 
 .section-skill h3 {
@@ -437,6 +438,7 @@ header {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     position: relative;
+    z-index: 0;
 }
 
 .section-skill h3::after {
@@ -499,7 +501,8 @@ header {
     width: 100%;
     flex-wrap: wrap;
     padding-top: 1rem;
-    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    background-color: white;
 }
 
 .section-portfolio h3 {
@@ -508,6 +511,7 @@ header {
     font-size: 2rem;
     position: relative;
     margin-bottom: 1rem;
+    z-index: 0;
 }
 
 .section-portfolio h3::after {
@@ -611,12 +615,41 @@ header {
 /* 1. arrange layout by flexbox */
 /* 2. set up input and button */
 
+.buffer {
+    width: 100%;
+    /* background-image: url(./assets/imgs/bg-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.buffer video {
+    width: 100%;
+    height: auto;
+}
+
+.wrapper-contact {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* fixed 版本怎麼寫RRRRRR */
 .section-contact {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 70%;
     gap: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    /* position: fixed; */
+    /* bottom: 80px; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    /* z-index: -3; */
 }
 
 .section-contact h3 {
@@ -718,7 +751,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5rem;
+    height: 2rem;
     background-color: var(--color-footer);
 }
 

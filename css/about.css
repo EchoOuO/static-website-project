@@ -68,6 +68,10 @@ button {
     border: none;
 }
 
+hr {
+    border: solid 0.5px var(--color-gray);
+}
+
 /* -- Nivagation bar -- */
 
 /* 1. arrange layout by flexbox */
@@ -203,7 +207,7 @@ add background images to header::before & background color to header */
     align-items: center;
     flex-wrap: wrap;
     gap: 3rem;
-    height: 44rem;
+    height: 100vh;
     background-color: var(--color-pic-cover-about);
     padding: 0rem 2rem 1rem 2rem;
     overflow-x: hidden;
@@ -221,7 +225,7 @@ add background images to header::before & background color to header */
     background-position: top center;
     opacity: 0.75;
     z-index: -1;
-    height: 44rem;
+    height: 100vh;
 }
 
 
@@ -320,7 +324,7 @@ add background images to header::before & background color to header */
 .section-skill h3 {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     position: relative;
 }
 
@@ -514,6 +518,107 @@ add background images to header::before & background color to header */
 }
 
 
+/* FAQ */
+
+.section-faq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.section-faq h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.section-faq h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 50px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 90px;
+    height: 20px;
+    background-color: var(--color-primary);
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.faq-all {
+    margin-bottom: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-div {
+    position: relative;
+    width: 100%;
+}
+
+.faq-all h5 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    margin-top: 0.5rem;
+    /* border-left: solid 5px var(--color-primary); */
+    padding-left: 10px;
+    width: 100%;
+}
+
+.faq-detail {
+    /* display: none; */
+    letter-spacing: 1.5px;
+    padding-bottom: 0.5rem;
+    padding-left: 30px;
+    /* border-bottom: solid 1px var(--color-gray) */
+}
+
+.faq-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2px;
+    left: -25px;
+    transform: translateX(-50%);
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.faq-line1,
+.faq-line2 {
+    width: 20px;
+    height: 4px;
+    background-color: var(--color-primary);
+    transition: 0.2s;
+}
+
+.faq-line2 {
+    transform: rotate(90deg) translateX(-15%);
+}
+
+/* .faq-icon:hover {
+    .faq-line2 {
+        opacity: 0;
+    }
+
+    .faq-detail {
+        display: block;
+    }
+} */
+
+
 /* -- Footer -- */
 
 /* 1. arrange layout by flexbox */
@@ -522,7 +627,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5rem;
+    height: 2rem;
     background-color: var(--color-footer)
 }
 
