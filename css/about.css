@@ -574,7 +574,7 @@ add background images to header::before & background color to header */
 }
 
 .faq-detail {
-    /* display: none; */
+    display: none;
     letter-spacing: 1.5px;
     padding-bottom: 0.5rem;
     padding-left: 30px;
