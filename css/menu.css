@@ -1,0 +1,132 @@
+.menu {
+  width: 50px;
+  height: 50px;
+  /* border: solid 1px var(--color-light); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  margin-top: 10px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.menu-line1,
+.menu-line2,
+.menu-line3,
+.menu-line4,
+.menu-line5 {
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background-color: var(--color-light);
+  transition: 0.5s;
+}
+
+.menu-line1 {
+  transform: translateY(-300%);
+}
+
+.menu-line2 {
+  transform: translateY(0%);
+}
+
+.menu-line3 {
+  transform: translateY(300%);
+}
+
+.menu-line4 {
+  transform: translateX(0%) translateY(0%) rotate(45deg);
+}
+
+.menu-line5 {
+  transform: translateX(0%) translateY(0%) rotate(-45deg);
+}
+
+.menu-line4,
+.menu-line5 {
+  display: none;
+  width: 30px;
+}
+
+.menu:hover {
+  .menu-line1 {
+    transform: translateX(-32%) translateY(-50%) rotate(45deg);
+    width: 60%;
+  }
+
+  .menu-line2 {
+    display: none;
+  }
+
+  .menu-line3 {
+    transform: translateX(32%) translateY(-50%) rotate(-45deg);
+    width: 60%;
+  }
+
+  .menu-line4 {
+    width: 40px;
+    height: 6px;
+    background-color: var(--color-primary);
+  }
+
+  .menu-line5 {
+    width: 40px;
+    height: 6px;
+    background-color: var(--color-primary);
+  }
+}
+
+.nav-hamburger {
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 5rem;
+  list-style: none;
+  text-decoration: none;
+  width: 100%;
+  height: 100vh;
+  /* background-color: var(--color-light-primary); */
+  background-image: url(../assets/imgs/bg-menu.jpg);
+  background-position: center;
+  background-size: cover;
+  display: none;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-hamburger.active {
+  transform: translateX(-50%) translateY(0%);
+}
+
+.nav-hamburger li {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+.nav-hamburger a {
+  color: var(--color-light);
+  text-decoration: none;
+  transition: 0.2s;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.nav-hamburger a:hover {
+  color: var(--color-button-hover);
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+    display: flex;
+  }
+}

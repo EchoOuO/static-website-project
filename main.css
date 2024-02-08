@@ -1,37 +1,47 @@
 /* set up common variable, color / font-family */
 :root {
-    --color-primary: rgb(244, 98, 58);
-    --color-light-primary: rgb(255, 183, 164);
-    --color-light: #f8f9fa;
-    --color-dark: #212529;
-    --color-gray: #d8d8d8;
-    --color-pic-cover-main: rgba(71, 39, 0, 0.5);
-    --color-pic-cover-about: rgba(71, 39, 0, 0.8);
-    --color-button: rgba(244, 98, 58, 0.75);
-    --color-button-hover: rgb(197, 58, 20);
-    --color-header-a-hover: rgb(197, 58, 20);
-    --color-footer: lightgray;
-    --font-family-head-nav: Merriweather, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-    --font-family-body: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-primary: rgb(244, 98, 58);
+  --color-light-primary: rgb(255, 183, 164);
+  --color-light: #f8f9fa;
+  --color-dark: #212529;
+  --color-gray: #d8d8d8;
+  --color-pic-cover-main: rgba(71, 39, 0, 0.5);
+  --color-pic-cover-about: rgba(71, 39, 0, 0.8);
+  --color-button: rgba(244, 98, 58, 0.75);
+  --color-button-hover: rgb(197, 58, 20);
+  --color-header-a-hover: rgb(197, 58, 20);
+  --color-footer: lightgray;
+  --font-family-head-nav: Merriweather, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --font-family-body: "Merriweather Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /* set up global properties, box-sizing / font related / make margin & padding = 0 / button related */
 /* to make similar elements uniform & change style easier */
 *,
 *::before {
-    /* border: solid 1px black; */
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+  border: solid 1px black;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 p,
 a,
 textarea,
 input {
-    font-family: var(--font-family-head-nav);
-    font-weight: 300;
+  font-family: var(--font-family-head-nav);
+  font-weight: 300;
 }
 
 h1,
@@ -40,39 +50,39 @@ h3,
 h4,
 h5,
 h6,
-nav>ul li a {
-    font-family: var(--font-family-body);
+nav > ul li a {
+  font-family: var(--font-family-body);
 }
 
 button,
-header>div>a,
+header > div > a,
 .backbutton a {
-    font-family: var(--font-family-body);
-    font-weight: 900;
-    text-decoration: none;
-    color: var(--color-light);
-    text-transform: uppercase;
-    letter-spacing: 2px;
+  font-family: var(--font-family-body);
+  font-weight: 900;
+  text-decoration: none;
+  color: var(--color-light);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 button {
-    padding: 1rem 2rem 1rem 2rem;
-    border-radius: 30px;
-    transition: 0.25s;
-    cursor: pointer;
-    border: none;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 30px;
+  transition: 0.25s;
+  cursor: pointer;
+  border: none;
 }
 
 .button-submit {
-    background-color: var(--color-button);
-    width: 40%;
-    font-size: 1rem;
+  background-color: var(--color-button);
+  width: 40%;
+  font-size: 1rem;
+  text-align: center;
 }
 
 button:hover {
-    background-color: var(--color-button-hover);
+  background-color: var(--color-button-hover);
 }
-
 
 /* -- Nivagation bar -- */
 
@@ -80,114 +90,38 @@ button:hover {
 /* 2. add link & hover effect */
 
 nav {
-    /* background-color: var(--color-primary); */
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    z-index: 2;
+  /* background-color: var(--color-primary); */
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 2;
 }
 
 .nav-main {
-    display: flex;
-    list-style: none;
-    text-decoration: none;
-    gap: 5%;
-    justify-content: center;
-    align-items: center;
-    height: 3rem;
-    transition: 0.4s;
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  gap: 5%;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  transition: 0.4s;
 }
 
 .nav-main a {
-    color: var(--color-light);
-    text-decoration: none;
-    transition: 0.2s;
-    display: block;
-    height: 100%;
-    width: 100%;
+  color: var(--color-light);
+  text-decoration: none;
+  transition: 0.2s;
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 .nav-main a:hover {
-    color: var(--color-primary);
-    text-decoration: underline;
-    transform: scale(1.15);
+  color: var(--color-primary);
+  text-decoration: underline;
+  transform: scale(1.15);
 }
-
-.menu {
-    width: 50px;
-    height: 50px;
-    /* border: solid 1px var(--color-light); */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: none;
-    margin-top: 10px;
-}
-
-.menu-line1,
-.menu-line2,
-.menu-line3 {
-    width: 40px;
-    height: 4px;
-    background-color: var(--color-light);
-    transition: 0.5s;
-}
-
-.menu-line1 {
-    transform: translateY(-200%);
-}
-
-.menu-line2 {
-    transform: translateY(0%);
-}
-
-.menu-line3 {
-    transform: translateY(200%);
-}
-
-.menu:hover {
-    .menu-line1 {
-        transform: translateX(-32.5%) translateY(50%) rotate(45deg);
-        width: 60%;
-    }
-
-    .menu-line2 {
-        display: none;
-    }
-
-    .menu-line3 {
-        transform: translateX(32.5%) translateY(-50%) rotate(-45deg);
-        width: 60%;
-    }
-}
-
-/* 缺JS把menu展開 */
-.nav-hamburger {
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-top: 3rem;
-    list-style: none;
-    text-decoration: none;
-    width: 100%;
-    height: 44rem;
-    background-color: var(--color-light-primary);
-    display: none;
-}
-
-.nav-hamburger li {
-    text-align: center;
-    font-size: 2rem;
-    padding-bottom: 2rem;
-}
-
 
 /* -- Header -- */
 
@@ -195,138 +129,137 @@ nav {
 /* 2. to make it easier to change color style and read the word,
 add background images to header::before & background color to header */
 
-
 header {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: var(--color-pic-cover-main);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--color-pic-cover-main);
 }
 
 &::before {
-    content: '';
-    position: absolute;
-    top: 0rem;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    background-image: url(./assets/imgs/bg-masthead.jpg);
-    background-size: cover;
-    background-position: top center;
-    opacity: 1;
-    z-index: -1;
-    /* to not block navigation bar */
-    height: 100vh;
+  content: "";
+  position: absolute;
+  top: 0rem;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-image: url(../assets/imgs/bg-masthead.jpg);
+  background-size: cover;
+  background-position: top center;
+  opacity: 1;
+  z-index: -1;
+  /* to not block navigation bar */
+  height: 100vh;
 }
 
 .cover {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cover h1,
 .cover img,
 .cover p,
 .cover a {
-    margin: 0.7rem;
+  margin: 0.7rem;
 }
 
 .cover h1 {
-    color: var(--color-light);
-    font-size: 6rem;
-    animation: cover-h1-a 1.5s forwards;
+  color: var(--color-light);
+  font-size: 6rem;1345
+  animation: cover-h1-a 1.5s forwards;
 }
 
 .cover p {
-    width: 0;
-    color: var(--color-gray);
-    font-size: 1.5rem;
-    letter-spacing: 5px;
-    display: inline-block;
-    text-align: center;
-    overflow: hidden;
-    white-space: nowrap;
-    /* 這啥 */
+  width: 0;
+  color: var(--color-gray);
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  /* 這啥 */
 }
 
 .cover-p-1 {
-    animation: cover-p-1-typing 1s steps(16, end) forwards, cover-p-blink-caret 0.75s step-end 2 forwards;
-    animation-delay: 1.5s;
+  animation: cover-p-1-typing 1s steps(16, end) forwards,
+    cover-p-blink-caret 0.75s step-end 2 forwards;
+  animation-delay: 1.5s;
 }
 
 .cover-p-2 {
-    animation: cover-p-2-typing 2.3s steps(32, end) forwards, cover-p-blink-caret 0.75s step-end 10 forwards;
-    animation-delay: 3.5s;
+  animation: cover-p-2-typing 2.3s steps(32, end) forwards,
+    cover-p-blink-caret 0.75s step-end 10 forwards;
+  animation-delay: 3.5s;
 }
 
 .cover a {
-    background-color: var(--color-primary);
-    text-decoration: none;
-    padding: 1rem 3rem 1rem 3rem;
-    border-radius: 30px;
-    transition: 0.25s;
-    margin-top: 3rem;
-    opacity: 0;
-    animation: cover-h1-a 1.5s forwards;
-    animation-delay: 6.3s;
+  background-color: var(--color-primary);
+  text-decoration: none;
+  padding: 1rem 3rem 1rem 3rem;
+  border-radius: 30px;
+  transition: 0.25s;
+  margin-top: 3rem;
+  opacity: 0;
+  animation: cover-h1-a 1.5s forwards;
+  animation-delay: 6.3s;
 }
 
 .cover a:hover {
-    background-color: var(--color-header-a-hover);
+  background-color: var(--color-header-a-hover);
 }
 
 @keyframes cover-h1-a {
-    from {
-        opacity: 0;
-        transform: translateY(40%);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(40%);
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes cover-p-1-typing {
-    from {
-        width: 0;
-    }
+  from {
+    width: 0;
+  }
 
-    to {
-        width: 225.38px;
-    }
+  to {
+    width: 225.38px;
+  }
 }
-
 
 @keyframes cover-p-2-typing {
-    from {
-        width: 0;
-    }
+  from {
+    width: 0;
+  }
 
-    to {
-        width: 532.1px;
-    }
+  to {
+    width: 532.1px;
+  }
 }
 
-
 @keyframes cover-p-blink-caret {
+  0% {
+    border-right: solid 1px var(--color-light);
+    border-color: transparent;
+  }
 
-    0% {
-        border-right: solid 1px var(--color-light);
-        border-color: transparent;
-    }
+  50% {
+    border-color: var(--color-light);
+  }
 
-    50% {
-        border-color: var(--color-light);
-    }
-
-    100% {
-        border-right: solid 1px var(--color-light);
-        border-color: transparent;
-    }
+  100% {
+    border-right: solid 1px var(--color-light);
+    border-color: transparent;
+  }
 }
 
 /* -- Service -- */
@@ -337,88 +270,88 @@ header {
 /* 4. RWD: make each service width = 50% or 100% */
 
 .section-service {
-    width: 80%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding-bottom: 0.5rem;
-    padding-top: 3rem;
-    background-color: white;
+  width: 80%;
+  position: relative;
+  left: 50%;
+  height: 60vh;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 0.5rem;
+  padding-top: 3rem;
+  background-color: white;
 }
 
 .section-service h3 {
-    width: 100%;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    position: relative;
+  width: 100%;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
 }
 
 .section-service h4 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--color-primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
 }
 
 .section-service h3,
 .service {
-    text-align: center;
-    margin-bottom: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .section-service h3::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    top: 20px;
-    right: 50%;
-    transform: translateX(50%);
-    width: 330px;
-    height: 20px;
-    background-color: var(--color-primary);
-    opacity: 0.5;
-    z-index: -1;
-    border-radius: 5px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 20px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 330px;
+  height: 20px;
+  background-color: var(--color-primary);
+  opacity: 0.5;
+  z-index: -1;
+  border-radius: 5px;
 }
 
 .service {
-    width: 25%;
-    border-radius: 10px;
-    transition: 0.3s;
-    padding: 0.7rem;
+  width: 25%;
+  border-radius: 10px;
+  transition: 0.3s;
+  padding: 0.7rem;
 }
 
 .service-p {
-    color: var(--color-gray);
-    font-weight: 300;
-    text-align: center;
-    letter-spacing: 1px;
-    opacity: 0;
-    transition: 0.5s;
-    transform: translateY(20%);
-    margin-bottom: 1rem;
+  color: var(--color-gray);
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1px;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateY(20%);
+  margin-bottom: 1rem;
 }
 
 .service img {
-    width: 5rem;
+  width: 5rem;
 }
 
 /* how to make <p> change color ??? */
 /* 壞了 */
 .service:hover {
-    border: solid var(--color-primary) 0.5px;
-    transform: translateY(-5%);
-    box-shadow: 0.5rem 0.5rem var(--color-light-primary);
+  border: solid var(--color-primary) 0.5px;
+  transform: translateY(-5%);
+  box-shadow: 0.5rem 0.5rem var(--color-light-primary);
 
-    .service-p {
-        color: var(--color-dark);
-        opacity: 1;
-        transform: translateY(0%);
-    }
+  .service-p {
+    color: var(--color-dark);
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
-
 
 /* -- Skill -- */
 
@@ -427,64 +360,130 @@ header {
 /* 3. RWD: flex-wrap: wrap */
 
 .section-skill {
-    /* background-color: var(--color-light-primary); */
-    padding-top: 1rem;
-    padding-bottom: 5rem;
-    background-color: white;
+  /* background-color: var(--color-light-primary); */
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+  background-color: white;
+  height: 30vh;
 }
 
 .section-skill h3 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 0;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 0;
 }
 
 .section-skill h3::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    top: 20px;
-    right: 50%;
-    transform: translateX(50%);
-    width: 110px;
-    height: 20px;
-    background-color: var(--color-primary);
-    opacity: 0.5;
-    z-index: -1;
-    border-radius: 5px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 20px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 110px;
+  height: 20px;
+  background-color: var(--color-primary);
+  opacity: 0.5;
+  z-index: -1;
+  border-radius: 5px;
 }
 
 .skill-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .skill-all {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 6rem;
-    height: 6rem;
-    border-radius: 100%;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
-    background-color: var(--color-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 100%;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+  background-color: var(--color-gray);
 }
 
 .section-skill img {
-    width: 4rem;
-    height: 4rem;
-    transition: 0.2s;
+  width: 4rem;
+  height: 4rem;
+  transition: 0.2s;
 }
 
-
 .section-skill img:hover {
-    transform: scale(1.15);
+  transform: scale(1.15);
+}
+
+.arrow-container {
+  position: relative;
+  background-color: white;
+  height: 10vh;
+}
+
+.downarrow {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+  animation: downarrow-move 3s ease-in-out infinite;
+}
+
+.arrow-line1,
+.arrow-line2,
+.arrow-line3,
+.arrow-line4 {
+  width: 40px;
+  height: 4px;
+  background-color: var(--color-primary);
+  transition: 0.5s;
+}
+
+.arrow-line1 {
+  transform: translateX(-32.5%) translateY(50%) rotate(45deg);
+  width: 60%;
+}
+
+.arrow-line2 {
+  transform: translateX(29%) translateY(-50%) rotate(-45deg);
+  width: 60%;
+}
+
+.arrow-line3 {
+  transform: translateX(-32.5%) translateY(150%) rotate(45deg);
+  width: 60%;
+}
+
+.arrow-line4 {
+  transform: translateX(29%) translateY(50%) rotate(-45deg);
+  width: 60%;
+}
+
+@keyframes downarrow-move {
+  from {
+    top: 0px;
+  }
+
+  to {
+    top: 0px;
+  }
+
+  50% {
+    top: -30px;
+    opacity: 0.5;
+  }
 }
 
 /* -- Portfolio -- */
@@ -496,118 +495,119 @@ header {
 /* 5. RWD: set each project width = 50% / 100% */
 
 .section-portfolio {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    flex-wrap: wrap;
-    padding-top: 1rem;
-    padding-bottom: 3rem;
-    background-color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  background-color: white;
+  height: 100vh;
 }
 
 .section-portfolio h3 {
-    width: 100%;
-    text-align: center;
-    font-size: 2rem;
-    position: relative;
-    margin-bottom: 1rem;
-    z-index: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  position: relative;
+  margin-bottom: 1rem;
+  z-index: 0;
 }
 
 .section-portfolio h3::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    top: 20px;
-    right: 50%;
-    transform: translateX(50%);
-    width: 220px;
-    height: 20px;
-    background-color: var(--color-primary);
-    opacity: 0.5;
-    z-index: -1;
-    border-radius: 5px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 20px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 220px;
+  height: 20px;
+  background-color: var(--color-primary);
+  opacity: 0.5;
+  z-index: -1;
+  border-radius: 5px;
 }
 
-.section-portfolio>div>p {
-    margin: 0.5rem;
+.section-portfolio > div > p {
+  margin: 0.5rem;
 }
 
 .project-title {
-    color: var(--color-gray);
-    font-size: 1.2rem;
-    font-weight: 500;
-    z-index: 1;
+  color: var(--color-gray);
+  font-size: 1.2rem;
+  font-weight: 500;
+  z-index: 1;
 }
 
 .project-detail {
-    color: var(--color-light);
-    font-size: 2rem;
-    font-weight: 500;
-    z-index: 1;
+  color: var(--color-light);
+  font-size: 2rem;
+  font-weight: 500;
+  z-index: 1;
 }
 
 .project {
-    width: 33.33333%;
-    height: 18rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-color: var(--color-primary);
-    transition: 0.5s;
-    z-index: 0;
-    cursor: pointer;
+  width: 33.33333%;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: var(--color-primary);
+  transition: 0.5s;
+  z-index: 0;
+  cursor: pointer;
 }
 
 .project::before {
-    content: '';
-    /* no text */
+  content: "";
+  /* no text */
 
-    /* to make img filled in without impact layout */
-    /* make parent : position: relative */
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+  /* to make img filled in without impact layout */
+  /* make parent : position: relative */
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 
-    /* to make img fully filled in, will change the ratio of img */
-    /* scale img to the smallest possible size to fill the container */
-    background-size: cover;
-    background-position: top center;
-    z-index: 2;
-    transition: 0.5s;
+  /* to make img fully filled in, will change the ratio of img */
+  /* scale img to the smallest possible size to fill the container */
+  background-size: cover;
+  background-position: top center;
+  z-index: 2;
+  transition: 0.5s;
 }
 
 /* add background img */
 #project1::before {
-    background-image: url(./assets/imgs/portfolio/fullsize/1.jpg);
+  background-image: url(./assets/imgs/portfolio/fullsize/1.jpg);
 }
 
 #project2::before {
-    background-image: url(./assets/imgs/portfolio/fullsize/2.jpg);
+  background-image: url(./assets/imgs/portfolio/fullsize/2.jpg);
 }
 
 #project3::before {
-    background-image: url(./assets/imgs/portfolio/fullsize/3.jpg);
+  background-image: url(./assets/imgs/portfolio/fullsize/3.jpg);
 }
 
 #project4::before {
-    background-image: url(./assets/imgs/portfolio/fullsize/4.jpg);
+  background-image: url(./assets/imgs/portfolio/fullsize/4.jpg);
 }
 
 #project5::before {
-    background-image: url(./assets/imgs/portfolio/fullsize/5.jpg);
+  background-image: url(./assets/imgs/portfolio/fullsize/5.jpg);
 }
 
 #project6::before {
-    background-image: url(./assets/imgs/portfolio/fullsize/6.jpg);
+  background-image: url(./assets/imgs/portfolio/fullsize/6.jpg);
 }
 
 .project:hover::before {
-    opacity: 0.15;
+  opacity: 0.15;
 }
 
 /* -- Contact -- */
@@ -616,147 +616,146 @@ header {
 /* 2. set up input and button */
 
 .buffer {
-    width: 100%;
-    /* background-image: url(./assets/imgs/bg-2.jpg);
+  width: 100%;
+  /* background-image: url(./assets/imgs/bg-2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; */
 }
 
 .buffer video {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .wrapper-contact {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 /* fixed 版本怎麼寫RRRRRR */
 .section-contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 70%;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-    /* position: fixed; */
-    /* bottom: 80px; */
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
-    /* z-index: -3; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  /* position: fixed; */
+  /* bottom: 80px; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  /* z-index: -3; */
 }
 
 .section-contact h3 {
-    font-size: 2rem;
-    position: relative;
+  font-size: 2rem;
+  position: relative;
 }
 
 .section-contact h3::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    top: 20px;
-    right: 50%;
-    transform: translateX(50%);
-    width: 320px;
-    height: 20px;
-    background-color: var(--color-primary);
-    opacity: 0.5;
-    z-index: -1;
-    border-radius: 5px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 20px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 320px;
+  height: 20px;
+  background-color: var(--color-primary);
+  opacity: 0.5;
+  z-index: -1;
+  border-radius: 5px;
 }
 
-.section-contact>p {
-    width: 90%;
-    min-width: 30rem;
-    text-align: center;
+.section-contact > p {
+  width: 90%;
+  /* min-width: 30rem; */
+  text-align: center;
 }
 
 .section-contact span {
-    color: var(--color-primary);
-    font-weight: 500;
+  color: var(--color-primary);
+  font-weight: 500;
 }
 
 .section-contact input {
-    width: 50%;
-    min-width: 20rem;
-    height: 2rem;
-    padding: 1rem;
-    font-size: 1rem;
-    border-radius: 7px;
-    border: solid var(--color-gray) 0.5px;
+  width: 50%;
+  min-width: 20rem;
+  height: 2rem;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 7px;
+  border: solid var(--color-gray) 0.5px;
 }
 
 .section-contact textarea {
-    resize: vertical;
-    width: 50%;
-    min-width: 20rem;
-    min-height: 10rem;
-    max-height: 50rem;
-    padding: 1rem;
-    padding-top: 0.5rem;
-    font-size: 1rem;
-    border-radius: 7px;
-    border: solid var(--color-gray) 0.5px;
+  resize: vertical;
+  width: 50%;
+  min-width: 20rem;
+  min-height: 10rem;
+  max-height: 50rem;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  font-size: 1rem;
+  border-radius: 7px;
+  border: solid var(--color-gray) 0.5px;
 }
 
 .contact-method {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .contact-method div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .contact-method img {
-    width: 3rem;
-    height: 3rem;
-    opacity: 0.7;
+  width: 3rem;
+  height: 3rem;
+  opacity: 0.7;
 }
 
 .contact-method p {
-    width: 15rem;
-    text-align: center;
-    color: var(--color-primary);
+  width: 15rem;
+  text-align: center;
+  color: var(--color-primary);
 }
 
 .contact-method p a {
-    text-decoration: none;
-    color: var(--color-primary);
+  text-decoration: none;
+  color: var(--color-primary);
 }
 
 .icon-email {
-    transform: translateX(-15%);
-    /* just to make the icon aligned to words */
+  transform: translateX(-15%);
+  /* just to make the icon aligned to words */
 }
-
 
 /* -- Footer -- */
 
 /* 1. arrange layout by flexbox */
 
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2rem;
-    background-color: var(--color-footer);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  background-color: var(--color-footer);
 }
 
 footer p {
-    text-align: center;
+  text-align: center;
 }
 
 /* -- Back to Top button -- */
@@ -765,62 +764,86 @@ footer p {
 /* 2. add link & hover effect */
 
 .backbutton {
-    position: fixed;
-    display: flex;
-    background-color: var(--color-primary);
-    width: 3rem;
-    height: 3rem;
-    bottom: 13%;
-    right: 1%;
-    border-radius: 100%;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 0.5;
-    transition: 0.3s;
+  position: fixed;
+  display: flex;
+  background-color: var(--color-primary);
+  width: 3rem;
+  height: 3rem;
+  bottom: 13%;
+  right: 1%;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.3s;
 }
 
 .backbutton a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .backbutton:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* -- RWD -- */
 
-@media (max-width: 1024px) {
-    .section-service div {
-        width: 50%;
-    }
+@media screen and (max-width: 1024px) {
+  .section-service div {
+    width: 50%;
+  }
 
-    .section-portfolio div {
-        width: 50%;
-    }
+  .section-portfolio div {
+    width: 50%;
+  }
+
+  .section-service,
+  .section-skill,
+  .section-portfolio {
+    height: auto;
+  }
+
+  .downarrow {
+    display: none;
+  }
 }
 
-@media (max-width: 600px) {
-    .section-service div {
-        width: 100%;
-    }
+@media screen and (max-height: 700px) {
+  .section-service,
+  .section-skill,
+  .section-portfolio {
+    height: auto;
+  }
 
-    .service-p {
-        opacity: 1;
-        color: var(--color-dark);
-    }
+  .downarrow {
+    display: none;
+  }
+}
 
-    .section-portfolio div {
-        width: 100%;
-    }
+@media screen and (max-width: 600px) {
+  .section-service div {
+    width: 100%;
+  }
 
-    .nav-main {
-        opacity: 0;
-        gap: 0%;
-    }
+  .service-p {
+    opacity: 1;
+    color: var(--color-dark);
+  }
 
-    .menu {
-        display: flex;
-    }
+  .section-portfolio div {
+    width: 100%;
+  }
 
+  .nav-main {
+    display: none;
+  }
+
+  .cover h1 {
+    font-size: 4rem;
+  }
+
+  .cover p {
+    font-size: 0.8rem;
+  }
 }

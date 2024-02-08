@@ -1,185 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Joe Yang | Freelance Frontend Developer </title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Joe Yang | Freelance Frontend Developer</title>
     <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
-        rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="../css/about.css">
-    <script src="../js/about.js"></script>
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="../css/menu.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Header START -->
     <header id="about">
-        <!-- Navigation bar START -->
-        <nav id="navigation">
-            <ul class="nav-main">
-                <li><a href="./about.html" id="nav-about">About Me</a></li>
-                <li><a href="../index.html#service">Service</a></li>
-                <li><a href="../index.html#skill">Skills</a></li>
-                <li><a href="../index.html#portfolio">Portfolio</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
-            </ul>
-            <section class="menu">
-                <div class="menu-line1"></div>
-                <div class="menu-line2"></div>
-                <div class="menu-line3"></div>
-            </section>
-            <ul class="nav-hamburger">
-                <li><a href="./pages/about.html">About Me</a></li>
-                <li><a href="#service">Service</a></li>
-                <li><a href="#skill">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <!-- Navigation bar END -->
+      <!-- Navigation bar START -->
+      <nav id="navigation">
+        <ul class="nav-main">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./about.html" id="nav-about">About Me</a></li>
+          <li><a href="../index.html#service">Service</a></li>
+          <li><a href="../index.html#skill">Skills</a></li>
+          <li><a href="../index.html#portfolio">Portfolio</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <section class="menu" onclick="clickMenu()">
+          <div class="menu-line1"></div>
+          <div class="menu-line2"></div>
+          <div class="menu-line3"></div>
+          <div class="menu-line4"></div>
+          <div class="menu-line5"></div>
+        </section>
+        <ul class="nav-hamburger">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./about.html">About Me</a></li>
+          <li><a href="../index.html#service">Service</a></li>
+          <li><a href="../index.html#skill">Skills</a></li>
+          <li><a href="../index.html#portfolio">Portfolio</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- Navigation bar END -->
 
-        <div class="cover">
-            <img src="../assets/imgs/portrait.jpg" alt="">
-            <div class="about-area">
-                <h1>Joe Yang</h1>
-                <p>Freelance Frontend Developer</p>
-                <div class="about-summary">
-                    <p>-- Diving into Web Development in Tamwood International College</p>
-                    <p>-- HTML5 / CSS / JavaScript / Git / Github / Bootstrap / j-Query / Sass</p>
-                    <p>-- Experienced in problem-finding, problem-solving and teamwork</p>
-                </div>
-                <a href="https://www.linkedin.com/in/tzuhungyang/?locale=en_US">My Linkedin</a>
-                <a href="../index.html#service">My Service & Portfolio</a>
+      <div class="cover">
+        <img class="portrait" src="../assets/imgs/portrait.jpg" alt="" />
+        <div class="about-area">
+          <h1>Joe Yang</h1>
+          <p>Freelance Frontend Developer</p>
+          <div class="about-summary">
+            <p>
+              -- Diving into Web Development in Tamwood International College
+            </p>
+            <p>
+              -- HTML5 / CSS / JavaScript / Git / Github / Bootstrap / j-Query /
+              Sass
+            </p>
+            <p>
+              -- Experienced in problem-finding, problem-solving and teamwork
+            </p>
+            <div class="about-icon-containter">
+              <a href="https://www.linkedin.com/in/tzuhungyang/"
+                ><img
+                  class="about-icon"
+                  src="../assets/icons/linkedin-2.png"
+                  alt=""
+              /></a>
+              <a href="https://github.com/EchoOuO/"
+                ><img
+                  class="about-icon"
+                  src="../assets/icons/github-2.png"
+                  alt=""
+              /></a>
             </div>
+          </div>
         </div>
+        <div class="arrow-container">
+          <a class="downarrow" href="#skill">
+            <div class="arrow-line1"></div>
+            <div class="arrow-line2"></div>
+            <div class="arrow-line3"></div>
+            <div class="arrow-line4"></div>
+          </a>
+        </div>
+      </div>
     </header>
     <!-- Header END -->
 
     <!-- Skills START -->
     <section class="section-skill" id="skill">
-        <h3>Skills</h3>
-        <div class="skill-area">
-            <div class="skill-all skill1">
-                <img src="../assets/icons/skill1.png" alt="">
-            </div>
-            <div class="skill-all skill2">
-                <img src="../assets/icons/skill2.png" alt="">
-            </div>
-            <div class="skill-all skill3">
-                <img src="../assets/icons/skill3.png" alt="">
-            </div>
-            <div class="skill-all skill4">
-                <img src="../assets/icons/skill4.png" alt="">
-            </div>
-            <div class="skill-all skill5">
-                <img src="../assets/icons/skill5.png" alt="">
-            </div>
-            <div class="skill-all skill6">
-                <img src="../assets/icons/skill6.png" alt="">
-            </div>
-            <div class="skill-all skill7">
-                <img src="../assets/icons/skill7.png" alt="">
-            </div>
-            <div class="skill-all skill8">
-                <img src="../assets/icons/skill8.png" alt="">
-            </div>
+      <h3>Skills</h3>
+      <div class="skill-area">
+        <div class="skill-all skill1">
+          <img src="../assets/icons/skill1.png" alt="" />
         </div>
+        <div class="skill-all skill2">
+          <img src="../assets/icons/skill2.png" alt="" />
+        </div>
+        <div class="skill-all skill3">
+          <img src="../assets/icons/skill3.png" alt="" />
+        </div>
+        <div class="skill-all skill4">
+          <img src="../assets/icons/skill4.png" alt="" />
+        </div>
+        <div class="skill-all skill5">
+          <img src="../assets/icons/skill5.png" alt="" />
+        </div>
+        <div class="skill-all skill6">
+          <img src="../assets/icons/skill6.png" alt="" />
+        </div>
+        <div class="skill-all skill7">
+          <img src="../assets/icons/skill7.png" alt="" />
+        </div>
+        <div class="skill-all skill8">
+          <img src="../assets/icons/skill8.png" alt="" />
+        </div>
+      </div>
     </section>
     <!-- Skills END -->
 
     <!-- Education & Experience START -->
     <section class="section-education-experience">
-        <h3>Education</h3>
-        <div class="education">
-            <img src="../assets/icons/education1.svg" alt="">
-            <div>
-                <h4>Tamwood International College</h4>
-                <h6>Dec. 2023 - Present</h6>
-                <p>Web Development Diploma & Co-op Program</p>
-                <ul>
-                    <li>HTML5 / CSS / JavaScript / Git / Github / Bootstrap / j-Query / PHP</li>
-                    <li>Teamwork</li>
-                    <li>Problem-finding and Problem-solving</li>
-                </ul>
-            </div>
+      <h3>Education</h3>
+      <div class="education">
+        <img src="../assets/icons/education1.svg" alt="" />
+        <div>
+          <h4>Tamwood International College</h4>
+          <h6>Dec. 2023 - Present</h6>
+          <p>Web Development Diploma & Co-op Program</p>
+          <ul>
+            <li>
+              HTML5 / CSS / JavaScript / Git / Github / Bootstrap / j-Query /
+              PHP
+            </li>
+            <li>Teamwork</li>
+            <li>Problem-finding and Problem-solving</li>
+          </ul>
         </div>
+      </div>
     </section>
     <!-- Education & Experience END -->
 
     <!-- Interest START -->
     <section class="section-interest">
-        <h3>Interest - Photography</h3>
-        <p>Traveling, exploring the unknown and enhancing the aesthetic emotions.</p>
-        <div class="interest">
-            <img src="../assets/imgs/portfolio/fullsize/DSC_6659.png" alt="">
-            <img src="../assets/imgs/portfolio/fullsize/DSC_6726.png" alt="">
-            <img src="../assets/imgs/portfolio/fullsize/DSC_6949.png" alt="">
-            <img src="../assets/imgs/portfolio/fullsize/DSC_7044.png" alt="">
-            <img src="../assets/imgs/portfolio/fullsize/DSC_7161.png" alt="">
-            <img src="../assets/imgs/portfolio/fullsize/DSC_7446.png" alt="">
-            <img src="../assets/imgs/portfolio/fullsize/DSC_7496.png" alt="">
-            <img src="../assets/imgs/portfolio/fullsize/DSC_7743.png" alt="">
-            <img src="../assets/imgs/portfolio/fullsize/DSC_7785.png" alt="">
-        </div>
+      <h3>Interest - Photography</h3>
+      <p>
+        Traveling, exploring the unknown and enhancing the aesthetic emotions.
+      </p>
+      <div class="interest">
+        <img src="../assets/imgs/portfolio/fullsize/DSC_6659.png" alt="" />
+        <img src="../assets/imgs/portfolio/fullsize/DSC_6726.png" alt="" />
+        <img src="../assets/imgs/portfolio/fullsize/DSC_6949.png" alt="" />
+        <img src="../assets/imgs/portfolio/fullsize/DSC_7044.png" alt="" />
+        <img src="../assets/imgs/portfolio/fullsize/DSC_7161.png" alt="" />
+        <img src="../assets/imgs/portfolio/fullsize/DSC_7446.png" alt="" />
+        <img src="../assets/imgs/portfolio/fullsize/DSC_7496.png" alt="" />
+        <img src="../assets/imgs/portfolio/fullsize/DSC_7743.png" alt="" />
+        <img src="../assets/imgs/portfolio/fullsize/DSC_7785.png" alt="" />
+      </div>
     </section>
 
     <!-- Interest END -->
 
     <!-- FAQ START -->
     <section class="section-faq">
-        <h3>FAQ</h3>
-        <div class="faq-all">
-            <div class="faq-div">
-                <div class="faq-icon" onclick="toggleParagraph()">
-                    <div class="faq-line1"></div>
-                    <div class="faq-line2"></div>
-                </div>
-                <h5>More details about me</h5>
-                <p class="faq-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis necessitatibus
-                    animi, veniam
-                    veritatis sit inventore?</p>
-            </div>
-            <hr>
-            <div class="faq-div">
-                <div class="faq-icon" onclick="toggleParagraph()">
-                    <div class="faq-line1"></div>
-                    <div class="faq-line2"></div>
-                </div>
-                <h5>The reasons why I come to Canada</h5>
-                <p class="faq-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis necessitatibus
-                    animi, veniam
-                    veritatis sit inventore?</p>
-            </div>
-            <hr>
-            <div class="faq-div">
-                <div class="faq-icon" onclick="toggleParagraph()">
-                    <div class="faq-line1"></div>
-                    <div class="faq-line2"></div>
-                </div>
-                <h5>Why I choose to be a web developer</h5>
-                <p class="faq-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis necessitatibus
-                    animi, veniam
-                    veritatis sit inventore?</p>
-            </div>
+      <h3>FAQ</h3>
+      <div class="faq-all">
+        <div class="faq-div">
+          <div class="faq-icon" onclick="clickButton1()">
+            <div class="faq-line faq-line1"></div>
+            <div class="faq-line faq-line2"></div>
+            <div class="faq-line faq-line3"></div>
+            <div class="faq-line faq-line4"></div>
+          </div>
+          <h5 class="faq-title faq-title1">More details about me</h5>
+          <p class="faq-detail faq-detail1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            necessitatibus animi, veniam veritatis sit inventore?
+          </p>
         </div>
-        <a class="back-to-main-button" href="../index.html">Back to Main Page</a>
+        <hr />
+        <div class="faq-div">
+          <div class="faq-icon" onclick="clickButton2()">
+            <div class="faq-line faq-line5"></div>
+            <div class="faq-line faq-line6"></div>
+            <div class="faq-line faq-line7"></div>
+            <div class="faq-line faq-line8"></div>
+          </div>
+          <h5 class="faq-title faq-title2">The reasons why I come to Canada</h5>
+          <p class="faq-detail faq-detail2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            necessitatibus animi, veniam veritatis sit inventore?
+          </p>
+        </div>
+        <hr />
+        <div class="faq-div">
+          <div class="faq-icon" onclick="clickButton3()">
+            <div class="faq-line faq-line9"></div>
+            <div class="faq-line faq-line10"></div>
+            <div class="faq-line faq-line11"></div>
+            <div class="faq-line faq-line12"></div>
+          </div>
+          <h5 class="faq-title faq-title3">
+            Why I choose to be a web developer
+          </h5>
+          <p class="faq-detail faq-detail3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            necessitatibus animi, veniam veritatis sit inventore?
+          </p>
+        </div>
+      </div>
+      <a class="back-to-main-button" href="../index.html">Back to Main Page</a>
     </section>
 
     <!-- FAQ END -->
 
-
     <!-- Footer START -->
     <footer>
-        <p>Copyright © 2024 - Joe Yang</p>
+      <p>Copyright © 2024 - Joe Yang</p>
     </footer>
     <!-- Footer END -->
 
     <!-- Back to Top -->
     <div class="backbutton">
-        <a href="#navigation">TOP</a>
+      <a href="#navigation">TOP</a>
     </div>
-</body>
-
+    <script src="../js/about.js" defer></script>
+    <script src="../js/navbar.js" defer></script>
+  </body>
 </html>

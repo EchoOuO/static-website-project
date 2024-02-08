@@ -1,13 +1,96 @@
-// 為啥動不了呢~~~  html 那邊也有加onclick了呀
-function toggleParagraph() {
-    const paragraph = document.querySelector('.faq-detail');
+"use strict";
 
-    // Toggle the display property
-    if (paragraph.style.display === 'none') {
-        paragraph.style.display === 'block';
-    } else {
-        paragraph.style.display === 'none';
-    }
+// FAQ icon click -> paragrapgh display
+
+// 1. 目前只有在display = none 的時候點有反應 --> fixed  (不能設定 document.querySelector(".faq-detail").style.display 為 變數)
+// 2. 只有點第一下 變block 有反應 --> 同上
+// 3. 只有第一個icon點下去 有反應
+
+// document.querySelector(".faq-icon").addEventListener("click", function () {
+//   if (
+//     document.querySelector(".faq-detail").style.display === "none" ||
+//     document.querySelector(".faq-detail").style.display === ""
+//   ) {
+//     document.querySelector(".faq-detail").style.display = "block";
+//   } else {
+//     document.querySelector(".faq-detail").style.display = "none";
+//   }
+// });
+
+// 第二種寫法，HTML 那邊要加 onclick="clickButton()"
+// const clickButton = function () {
+//   if (
+//     document.querySelector(".faq-detail").style.display === "none" ||
+//     document.querySelector(".faq-detail").style.display === ""
+//   ) {
+//     document.querySelector(".faq-detail").style.display = "block";
+//   } else {
+//     document.querySelector(".faq-detail").style.display = "none";
+//   }
+// };
+
+const clickButton1 = function () {
+  if (
+    document.querySelector(".faq-detail1").style.display === "none" ||
+    document.querySelector(".faq-detail1").style.display === ""
+  ) {
+    document.querySelector(".faq-detail1").style.display = "block";
+    document.querySelector(".faq-line1").style.opacity = "0";
+    document.querySelector(".faq-line2").style.opacity = "0";
+    document.querySelector(".faq-line3").style.opacity = "1";
+    document.querySelector(".faq-line4").style.opacity = "1";
+    document.querySelector(".faq-title1").style.backgroundColor =
+      "var(--color-light-primary)";
+  } else {
+    document.querySelector(".faq-detail1").style.display = "none";
+    document.querySelector(".faq-line1").style.opacity = "1";
+    document.querySelector(".faq-line2").style.opacity = "1";
+    document.querySelector(".faq-line3").style.opacity = "0";
+    document.querySelector(".faq-line4").style.opacity = "0";
+    document.querySelector(".faq-title1").style.backgroundColor = "";
+  }
 };
 
+const clickButton2 = function () {
+  if (
+    document.querySelector(".faq-detail2").style.display === "none" ||
+    document.querySelector(".faq-detail2").style.display === ""
+  ) {
+    document.querySelector(".faq-detail2").style.display = "block";
+    document.querySelector(".faq-line5").style.opacity = "0";
+    document.querySelector(".faq-line6").style.opacity = "0";
+    document.querySelector(".faq-line7").style.opacity = "1";
+    document.querySelector(".faq-line8").style.opacity = "1";
+    document.querySelector(".faq-title2").style.backgroundColor =
+      "var(--color-light-primary)";
+  } else {
+    document.querySelector(".faq-detail2").style.display = "none";
+    document.querySelector(".faq-line5").style.opacity = "1";
+    document.querySelector(".faq-line6").style.opacity = "1";
+    document.querySelector(".faq-line7").style.opacity = "0";
+    document.querySelector(".faq-line8").style.opacity = "0";
+    document.querySelector(".faq-title2").style.backgroundColor = "";
+  }
+};
 
+const clickButton3 = function () {
+  if (
+    document.querySelector(".faq-detail3").style.display === "none" ||
+    document.querySelector(".faq-detail3").style.display === ""
+  ) {
+    document.querySelector(".faq-detail3").style.display = "block";
+    document.querySelector(".faq-line9").style.opacity = "0";
+    document.querySelector(".faq-line10").style.opacity = "0";
+    document.querySelector(".faq-line11").style.opacity = "1";
+    document.querySelector(".faq-line12").style.opacity = "1";
+    document.querySelector(".faq-title3").style.backgroundColor =
+      "var(--color-light-primary)";
+  } else {
+    document.querySelector(".faq-detail3").style.display = "none";
+    document.querySelector(".faq-line9").style.opacity = "1";
+    document.querySelector(".faq-line10").style.opacity = "1";
+    document.querySelector(".faq-line11").style.opacity = "0";
+    document.querySelector(".faq-line12").style.opacity = "0";
+    document.querySelector(".faq-title3").style.backgroundColor = "";
+  }
+};
