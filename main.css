@@ -50,7 +50,7 @@ h3,
 h4,
 h5,
 h6,
-nav > ul li a {
+nav ul li a {
   font-family: var(--font-family-body);
 }
 
@@ -171,7 +171,7 @@ header {
 
 .cover h1 {
   color: var(--color-light);
-  font-size: 6rem;1345
+  font-size: 6rem;
   animation: cover-h1-a 1.5s forwards;
 }
 
@@ -374,8 +374,7 @@ header {
   position: relative;
   z-index: 0;
 }
-
-.section-skill h3::after {
+1345 .section-skill h3::after {
   content: "";
   position: absolute;
   bottom: 0;
