@@ -151,7 +151,6 @@ header {
   background-position: top center;
   opacity: 1;
   z-index: -1;
-  /* to not block navigation bar */
   height: 100vh;
 }
 
@@ -346,7 +345,7 @@ header {
   transform: translateY(-5%);
   box-shadow: 0.5rem 0.5rem var(--color-light-primary);
 
-  .service-p {
+  p {
     color: var(--color-dark);
     opacity: 1;
     transform: translateY(0%);
@@ -374,7 +373,8 @@ header {
   position: relative;
   z-index: 0;
 }
-1345 .section-skill h3::after {
+
+.section-skill h3::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -793,6 +793,11 @@ footer p {
     width: 50%;
   }
 
+  .service-p {
+    opacity: 1;
+    color: var(--color-dark);
+  }
+
   .section-portfolio div {
     width: 50%;
   }
@@ -823,11 +828,6 @@ footer p {
 @media screen and (max-width: 600px) {
   .section-service div {
     width: 100%;
-  }
-
-  .service-p {
-    opacity: 1;
-    color: var(--color-dark);
   }
 
   .section-portfolio div {
