@@ -146,7 +146,7 @@ header {
   bottom: 0px;
   left: 0px;
   right: 0px;
-  background-image: url(./assets/imgs/bg-masthead.jpg);
+  background-image: url(./assets/imgs/bg-masthead-min.jpg);
   background-size: cover;
   background-position: top center;
   opacity: 1;
@@ -582,27 +582,27 @@ header {
 
 /* add background img */
 #project1::before {
-  background-image: url(./assets/imgs/portfolio/fullsize/1.jpg);
+  background-image: url(./assets/imgs/portfolio/fullsize/1-min.jpg);
 }
 
 #project2::before {
-  background-image: url(./assets/imgs/portfolio/fullsize/2.jpg);
+  background-image: url(./assets/imgs/portfolio/fullsize/2-min.jpg);
 }
 
 #project3::before {
-  background-image: url(./assets/imgs/portfolio/fullsize/3.jpg);
+  background-image: url(./assets/imgs/portfolio/fullsize/3-min.jpg);
 }
 
 #project4::before {
-  background-image: url(./assets/imgs/portfolio/fullsize/4.jpg);
+  background-image: url(./assets/imgs/portfolio/fullsize/4-min.jpg);
 }
 
 #project5::before {
-  background-image: url(./assets/imgs/portfolio/fullsize/5.jpg);
+  background-image: url(./assets/imgs/portfolio/fullsize/5-min.jpg);
 }
 
 #project6::before {
-  background-image: url(./assets/imgs/portfolio/fullsize/6.jpg);
+  background-image: url(./assets/imgs/portfolio/fullsize/6-min.jpg);
 }
 
 .project:hover::before {

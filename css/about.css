@@ -221,7 +221,7 @@ add background images to header::before & background color to header */
   bottom: 0px;
   left: 0%;
   right: 0%;
-  background-image: url(../assets/imgs/bg-masthead.jpg);
+  background-image: url(../assets/imgs/bg-masthead-min.jpg);
   background-size: cover;
   background-position: top center;
   opacity: 0.75;
@@ -553,10 +553,9 @@ add background images to header::before & background color to header */
   border-radius: 5px;
 }
 
-.section-interest img {
+.interest img {
   width: 32%;
   height: auto;
-  /* min-width: 16rem; */
 }
 
 .back-to-main-button {
