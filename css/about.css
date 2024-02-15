@@ -697,7 +697,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2rem;
+  height: 3rem;
   background-color: var(--color-footer);
 }
 

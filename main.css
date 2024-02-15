@@ -23,7 +23,7 @@
 /* to make similar elements uniform & change style easier */
 *,
 *::before {
-  /* border: solid 1px black; */
+  border: solid 1px black;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -187,15 +187,15 @@ header {
 }
 
 .cover-p-1 {
-  animation: cover-p-1-typing 1s steps(16, end) forwards,
+  animation: cover-p-1-typing 0.8s steps(16, end) forwards,
     cover-p-blink-caret 0.75s step-end 2 forwards;
   animation-delay: 1.5s;
 }
 
 .cover-p-2 {
-  animation: cover-p-2-typing 2.3s steps(32, end) forwards,
+  animation: cover-p-2-typing 2.1s steps(32, end) forwards,
     cover-p-blink-caret 0.75s step-end 10 forwards;
-  animation-delay: 3.5s;
+  animation-delay: 3s;
 }
 
 .cover a {
@@ -207,7 +207,7 @@ header {
   margin-top: 3rem;
   opacity: 0;
   animation: cover-h1-a 1.5s forwards;
-  animation-delay: 6.3s;
+  animation-delay: 6.1s;
 }
 
 .cover a:hover {
@@ -304,7 +304,6 @@ header {
 .section-service h3::after {
   content: "";
   position: absolute;
-  bottom: 0;
   top: 20px;
   right: 50%;
   transform: translateX(50%);
@@ -321,16 +320,17 @@ header {
   border-radius: 10px;
   transition: 0.3s;
   padding: 0.7rem;
+  animation: "";
 }
 
 .service-p {
-  color: var(--color-gray);
+  color: var(--color-dark);
   font-weight: 300;
   text-align: center;
   letter-spacing: 1px;
-  opacity: 0;
+  /* opacity: 0; */
   transition: 0.5s;
-  transform: translateY(20%);
+  /* transform: translateY(20%); */
   margin-bottom: 1rem;
 }
 
@@ -343,11 +343,25 @@ header {
 .service:hover {
   border: solid var(--color-primary) 0.5px;
   transform: translateY(-5%);
-  box-shadow: 0.5rem 0.5rem var(--color-light-primary);
+  box-shadow: 0.5rem 0.5rem 0.5rem var(--color-light-primary);
 
   p {
     color: var(--color-dark);
     opacity: 1;
+    /* transform: translateY(0%); */
+  }
+}
+
+@keyframes service-animation-jump {
+  from {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(-15%);
+  }
+
+  to {
     transform: translateY(0%);
   }
 }
@@ -407,6 +421,20 @@ header {
   border-radius: 100%;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
   background-color: var(--color-gray);
+  /* transform: translateX(-1500%) rotate(-720deg); */
+  opacity: 0;
+}
+
+@keyframes skill-rolling {
+  from {
+    transform: translateX(-1000%) rotate(-720deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(-0%) rotate(0deg);
+    opacity: 1;
+  }
 }
 
 .section-skill img {
@@ -555,7 +583,7 @@ header {
   align-items: center;
   position: relative;
   background-color: var(--color-primary);
-  transition: 0.5s;
+  /* transition: 0.5s; */
   z-index: 0;
   cursor: pointer;
 }
@@ -606,7 +634,7 @@ header {
 }
 
 .project:hover::before {
-  opacity: 0.15;
+  opacity: 0.1;
 }
 
 /* -- Contact -- */
@@ -616,6 +644,8 @@ header {
 
 .buffer {
   width: 100%;
+  /* height: 30rem; */
+  position: relative;
   /* background-image: url(./assets/imgs/bg-2.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -623,8 +653,24 @@ header {
 }
 
 .buffer video {
-  width: 100%;
+  width: 25%;
   height: auto;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 20px gray;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.video-1 {
+  position: absolute;
+  bottom: -30rem;
+  left: -2%;
+}
+
+.video-2 {
+  position: absolute;
+  right: -2%;
+  bottom: -24rem;
 }
 
 .wrapper-contact {
@@ -749,7 +795,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2rem;
+  height: 3rem;
   background-color: var(--color-footer);
 }
 
@@ -809,6 +855,10 @@ footer p {
   }
 
   .downarrow {
+    display: none;
+  }
+
+  .buffer {
     display: none;
   }
 }
