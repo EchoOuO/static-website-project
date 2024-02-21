@@ -26,6 +26,7 @@ for (let i = 0; i < serviceAll.length; i++) {
   });
 }
 
+// --- Skills animation
 const skillAll = document.querySelectorAll(".skill-all");
 
 for (let i = 0; i < skillAll.length; i++) {
@@ -47,7 +48,7 @@ for (let i = 0; i < skillAll.length; i++) {
     }
 
     if (
-      Math.ceil(window.scrollY) > skillPosition * 0.8 &&
+      Math.ceil(window.scrollY) > skillPosition * 0.6 &&
       window.innerWidth <= 700
     ) {
       skillAll[i].style.animation = "skill-rolling 1.5s forwards";

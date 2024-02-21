@@ -94,3 +94,34 @@ const clickButton3 = function () {
     document.querySelector(".faq-title3").style.backgroundColor = "";
   }
 };
+
+// --- Skills animation
+const skillAll = document.querySelectorAll(".skill-all");
+
+for (let i = 0; i < skillAll.length; i++) {
+  const skillPosition =
+    document.querySelector(".skill-all").getBoundingClientRect().top +
+    window.scrollY;
+
+  let delayTime = i;
+
+  console.log(Math.ceil(window.scrollY), skillPosition, window.innerWidth);
+
+  window.addEventListener("scroll", () => {
+    if (
+      Math.ceil(window.scrollY) > skillPosition * 0.4 &&
+      window.innerWidth > 700
+    ) {
+      skillAll[i].style.animation = "skill-rolling 1.5s forwards";
+      skillAll[i].style.animationDelay = `${delayTime * 0.1}s`;
+    }
+
+    if (
+      Math.ceil(window.scrollY) > skillPosition * 0.45 &&
+      window.innerWidth <= 700
+    ) {
+      skillAll[i].style.animation = "skill-rolling 1.5s forwards";
+      skillAll[i].style.animationDelay = `${delayTime * 0.1}s`;
+    }
+  });
+}

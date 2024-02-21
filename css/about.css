@@ -418,6 +418,19 @@ add background images to header::before & background color to header */
   height: 6rem;
   border-radius: 100%;
   background-color: var(--color-gray);
+  opacity: 0;
+}
+
+@keyframes skill-rolling {
+  from {
+    transform: translateX(-1000%) rotate(-720deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(-0%) rotate(0deg);
+    opacity: 1;
+  }
 }
 
 .section-skill img {
