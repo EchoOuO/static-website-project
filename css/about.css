@@ -173,27 +173,6 @@ nav {
   }
 }
 
-/* 缺JS把menu展開 */
-.nav-hamburger {
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  padding-top: 3rem;
-  list-style: none;
-  text-decoration: none;
-  width: 100%;
-  height: 44rem;
-  background-color: var(--color-light-primary);
-  display: none;
-}
-sizeabout-area .nav-hamburger li {
-  text-align: center;
-  font-size: 2rem;
-  padding-bottom: 2rem;
-}
-
 /* -- Header -- */
 
 /* 1. arrange layout by flexbox */
@@ -620,8 +599,8 @@ add background images to header::before & background color to header */
 
 .faq-all {
   margin-bottom: 2rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -630,6 +609,7 @@ add background images to header::before & background color to header */
 .faq-div {
   position: relative;
   width: 100%;
+  padding-bottom: 0.5rem;
 }
 
 .faq-title {
@@ -646,15 +626,15 @@ add background images to header::before & background color to header */
 
 .faq-detail {
   letter-spacing: 1.5px;
-  padding-bottom: 0.5rem;
   padding-left: 30px;
-  /* border-bottom: solid 1px var(--color-gray) */
+  max-height: 0;
+  /* opacity: 0; */
+  transition: max-height 0.5s;
+  overflow: hidden;
 }
 
-.faq-detail1,
-.faq-detail2,
-.faq-detail3 {
-  display: none;
+.faq-detail-shift {
+  max-height: 60px;
 }
 
 .faq-icon {
@@ -672,6 +652,14 @@ add background images to header::before & background color to header */
   margin-top: 5px;
 }
 
+.faq-detail-hidden {
+  display: none;
+}
+
+.faq-icon-hidden {
+  opacity: 0;
+}
+
 .faq-line {
   width: 20px;
   height: 4px;
@@ -680,25 +668,17 @@ add background images to header::before & background color to header */
   position: absolute;
 }
 
-.faq-line2,
-.faq-line6,
-.faq-line10 {
+.faq-line2 {
   transform: rotate(90deg) translateX(0%);
 }
 
-.faq-line3,
-.faq-line7,
-.faq-line11 {
+.faq-line3 {
   transform: rotate(45deg);
-  opacity: 0;
   width: 23px;
 }
 
-.faq-line4,
-.faq-line8,
-.faq-line12 {
+.faq-line4 {
   transform: rotate(-45deg);
-  opacity: 0;
   width: 23px;
 }
 
@@ -761,6 +741,10 @@ footer p {
 
   .section-interest img {
     width: 49%;
+  }
+
+  .faq-detail-shift {
+    max-height: 150px;
   }
 }
 

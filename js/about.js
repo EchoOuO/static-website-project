@@ -2,98 +2,45 @@
 
 // FAQ icon click -> paragrapgh display
 
-// 1. 目前只有在display = none 的時候點有反應 --> fixed  (不能設定 document.querySelector(".faq-detail").style.display 為 變數)
-// 2. 只有點第一下 變block 有反應 --> 同上
-// 3. 只有第一個icon點下去 有反應
+const faqDetail = document.querySelectorAll(".faq-detail");
+const faqIcon = document.querySelectorAll(".faq-icon");
+const faqLine1 = document.querySelectorAll(".faq-line1");
+const faqLine2 = document.querySelectorAll(".faq-line2");
+const faqLine3 = document.querySelectorAll(".faq-line3");
+const faqLine4 = document.querySelectorAll(".faq-line4");
 
-// document.querySelector(".faq-icon").addEventListener("click", function () {
-//   if (
-//     document.querySelector(".faq-detail").style.display === "none" ||
-//     document.querySelector(".faq-detail").style.display === ""
-//   ) {
-//     document.querySelector(".faq-detail").style.display = "block";
-//   } else {
-//     document.querySelector(".faq-detail").style.display = "none";
-//   }
-// });
+// open & close faq
+// how to make one open , one close????
+for (let i = 0; i < faqIcon.length; i++) {
+  // const initFaq = function () {
+  //   document
+  //     .querySelectorAll(".faq-detail:not(:nth-child(" + i + "))")
+  //     .classList.remove("faq-detail-shift");
+  //   document
+  //     .querySelectorAll(".faq-line1:not(:nth-child(" + i + "))")
+  //     .classList.remove("faq-icon-hidden");
+  //   document
+  //     .querySelectorAll(".faq-line2:not(:nth-child(" + i + "))")
+  //     .classList.remove("faq-icon-hidden");
+  //   document
+  //     .querySelectorAll(".faq-line3:not(:nth-child(" + i + "))")
+  //     .classList.add("faq-icon-hidden");
+  //   document
+  //     .querySelectorAll(".faq-line4:not(:nth-child(" + i + "))")
+  //     .classList.add("faq-icon-hidden");
+  // };
 
-// 第二種寫法，HTML 那邊要加 onclick="clickButton()"
-// const clickButton = function () {
-//   if (
-//     document.querySelector(".faq-detail").style.display === "none" ||
-//     document.querySelector(".faq-detail").style.display === ""
-//   ) {
-//     document.querySelector(".faq-detail").style.display = "block";
-//   } else {
-//     document.querySelector(".faq-detail").style.display = "none";
-//   }
-// };
+  const openCloseFaq = function () {
+    faqDetail[i].classList.toggle("faq-detail-shift");
+    faqLine1[i].classList.toggle("faq-icon-hidden");
+    faqLine2[i].classList.toggle("faq-icon-hidden");
+    faqLine3[i].classList.toggle("faq-icon-hidden");
+    faqLine4[i].classList.toggle("faq-icon-hidden");
+  };
 
-const clickButton1 = function () {
-  if (
-    document.querySelector(".faq-detail1").style.display === "none" ||
-    document.querySelector(".faq-detail1").style.display === ""
-  ) {
-    document.querySelector(".faq-detail1").style.display = "block";
-    document.querySelector(".faq-line1").style.opacity = "0";
-    document.querySelector(".faq-line2").style.opacity = "0";
-    document.querySelector(".faq-line3").style.opacity = "1";
-    document.querySelector(".faq-line4").style.opacity = "1";
-    document.querySelector(".faq-title1").style.backgroundColor =
-      "var(--color-light-primary)";
-  } else {
-    document.querySelector(".faq-detail1").style.display = "none";
-    document.querySelector(".faq-line1").style.opacity = "1";
-    document.querySelector(".faq-line2").style.opacity = "1";
-    document.querySelector(".faq-line3").style.opacity = "0";
-    document.querySelector(".faq-line4").style.opacity = "0";
-    document.querySelector(".faq-title1").style.backgroundColor = "";
-  }
-};
-
-const clickButton2 = function () {
-  if (
-    document.querySelector(".faq-detail2").style.display === "none" ||
-    document.querySelector(".faq-detail2").style.display === ""
-  ) {
-    document.querySelector(".faq-detail2").style.display = "block";
-    document.querySelector(".faq-line5").style.opacity = "0";
-    document.querySelector(".faq-line6").style.opacity = "0";
-    document.querySelector(".faq-line7").style.opacity = "1";
-    document.querySelector(".faq-line8").style.opacity = "1";
-    document.querySelector(".faq-title2").style.backgroundColor =
-      "var(--color-light-primary)";
-  } else {
-    document.querySelector(".faq-detail2").style.display = "none";
-    document.querySelector(".faq-line5").style.opacity = "1";
-    document.querySelector(".faq-line6").style.opacity = "1";
-    document.querySelector(".faq-line7").style.opacity = "0";
-    document.querySelector(".faq-line8").style.opacity = "0";
-    document.querySelector(".faq-title2").style.backgroundColor = "";
-  }
-};
-
-const clickButton3 = function () {
-  if (
-    document.querySelector(".faq-detail3").style.display === "none" ||
-    document.querySelector(".faq-detail3").style.display === ""
-  ) {
-    document.querySelector(".faq-detail3").style.display = "block";
-    document.querySelector(".faq-line9").style.opacity = "0";
-    document.querySelector(".faq-line10").style.opacity = "0";
-    document.querySelector(".faq-line11").style.opacity = "1";
-    document.querySelector(".faq-line12").style.opacity = "1";
-    document.querySelector(".faq-title3").style.backgroundColor =
-      "var(--color-light-primary)";
-  } else {
-    document.querySelector(".faq-detail3").style.display = "none";
-    document.querySelector(".faq-line9").style.opacity = "1";
-    document.querySelector(".faq-line10").style.opacity = "1";
-    document.querySelector(".faq-line11").style.opacity = "0";
-    document.querySelector(".faq-line12").style.opacity = "0";
-    document.querySelector(".faq-title3").style.backgroundColor = "";
-  }
-};
+  // faqIcon[i].addEventListener("click", initFaq);
+  faqIcon[i].addEventListener("click", openCloseFaq);
+}
 
 // --- Skills animation
 const skillAll = document.querySelectorAll(".skill-all");
