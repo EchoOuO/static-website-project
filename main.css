@@ -108,6 +108,11 @@ nav {
   transition: 0.4s;
 }
 
+.nav-main li {
+  padding-bottom: 3px;
+  transition: 0.25s;
+}
+
 .nav-main a {
   color: var(--color-light);
   text-decoration: none;
@@ -117,10 +122,19 @@ nav {
   width: 100%;
 }
 
-.nav-main a:hover {
+.nav-main li:hover {
+  border-bottom: solid var(--color-primary) 1px;
+
+  a {
+    color: var(--color-primary);
+  }
+
+  /* text-decoration: underline; */
+  /* transform: scale(1.15); */
+}
+
+#nav-home {
   color: var(--color-primary);
-  text-decoration: underline;
-  transform: scale(1.15);
 }
 
 /* -- Header -- */

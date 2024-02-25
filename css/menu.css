@@ -93,12 +93,27 @@
   text-decoration: none;
   width: 100%;
   max-height: 0;
-  background-image: url(../assets/imgs/bg-menu-min.jpg);
+  /* background-image: url(../assets/imgs/bg-menu-min.jpg);
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
+  background-color: #33333352;
   display: none;
   transition: max-height 3s ease-in-out;
   overflow: hidden;
+}
+
+.nav-hamburger::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #3333331f;
+  background-image: url(../assets/imgs/bg-menu-min.jpg);
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
 }
 
 .active {

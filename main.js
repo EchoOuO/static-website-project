@@ -4,10 +4,10 @@
 const service = document.querySelector(".service");
 const serviceAll = document.querySelectorAll(".service");
 
-console.log(service);
-console.log(serviceAll);
+// console.log(service);
+// console.log(serviceAll);
 // console.log(servicePosition);
-console.log(window.scrollY);
+// console.log(window.scrollY);
 
 for (let i = 0; i < serviceAll.length; i++) {
   const servicePosition =
@@ -15,8 +15,8 @@ for (let i = 0; i < serviceAll.length; i++) {
     window.scrollY;
 
   let delayTime = i + 1.5;
-  console.log(delayTime);
-  console.log(`${delayTime}s`);
+  // console.log(delayTime);
+  // console.log(`${delayTime}s`);
 
   window.addEventListener("scroll", () => {
     if (Math.ceil(window.scrollY) > servicePosition * 0.55) {
@@ -36,7 +36,7 @@ for (let i = 0; i < skillAll.length; i++) {
 
   let delayTime = i;
 
-  console.log(Math.ceil(window.scrollY), skillPosition, window.innerWidth);
+  // console.log(Math.ceil(window.scrollY), skillPosition, window.innerWidth);
 
   window.addEventListener("scroll", () => {
     if (
@@ -56,3 +56,17 @@ for (let i = 0; i < skillAll.length; i++) {
     }
   });
 }
+
+// --- Submit button alert
+const submitButton = document.querySelector(".button-submit");
+
+// can just alert for once?
+function thanksInfo() {
+  // for (let input of document.querySelectorAll("input")) {
+  //   if (!input.value == "") {
+  alert("Thanks, I'll reply you ASAP");
+  //     }
+  //   }
+}
+
+submitButton.addEventListener("click", thanksInfo);
