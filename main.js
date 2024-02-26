@@ -70,3 +70,43 @@ function thanksInfo() {
 }
 
 submitButton.addEventListener("click", thanksInfo);
+
+// --- Portfolios pop-out
+const project = document.querySelectorAll(".project"); // 要怎麼抓到 ::before ???
+// const projectBefore = project.getComputedStyle(":before");
+const projectDetail = document.querySelectorAll(".project-pop-out");
+const cancelButton = document.querySelectorAll(".project-cancle-button");
+const layout = document.querySelector(".overlay");
+
+for (let i = 0; i < project.length; i++) {
+  function popout() {
+    projectDetail[i].classList.remove("hidden");
+    layout.classList.remove("hidden");
+  }
+  cancelButton[i].addEventListener("click", popout);
+  layout.addEventListener("click", popout);
+}
+
+// Clse portfolios  details
+
+for (let i = 0; i < cancelButton.length; i++) {
+  function hidden(e) {
+    // console.log(projectDetail);
+    // console.log(cancelButton);
+    // console.log(layout);
+    // console.log(e);
+    projectDetail[i].classList.add("hidden");
+    layout.classList.add("hidden");
+  }
+
+  function hiddenEsc(e) {
+    // console.log(e);
+    if (e.key == "Escape") {
+      hidden();
+    }
+  }
+
+  cancelButton[i].addEventListener("click", hidden);
+  layout.addEventListener("click", hidden);
+  window.addEventListener("keydown", hiddenEsc);
+}
