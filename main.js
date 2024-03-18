@@ -62,11 +62,7 @@ const submitButton = document.querySelector(".button-submit");
 
 // can just alert for once?
 function thanksInfo() {
-  // for (let input of document.querySelectorAll("input")) {
-  //   if (!input.value == "") {
   alert("Thanks, I'll reply you ASAP");
-  //     }
-  //   }
 }
 
 submitButton.addEventListener("click", thanksInfo);
@@ -78,17 +74,14 @@ const projectDetail = document.querySelectorAll(".project-pop-out");
 const cancelButton = document.querySelectorAll(".project-cancle-button");
 const layout = document.querySelector(".overlay");
 
-for (let i = 0; i < project.length; i++) {
-  function popout() {
-    projectDetail[i].classList.remove("hidden");
+project.forEach((ele, idx) => {
+  ele.addEventListener("click", () => {
+    projectDetail[idx].classList.remove("hidden");
     layout.classList.remove("hidden");
-  }
-  cancelButton[i].addEventListener("click", popout);
-  layout.addEventListener("click", popout);
-}
+  });
+});
 
 // Clse portfolios  details
-
 for (let i = 0; i < cancelButton.length; i++) {
   function hidden(e) {
     // console.log(projectDetail);
@@ -97,6 +90,7 @@ for (let i = 0; i < cancelButton.length; i++) {
     // console.log(e);
     projectDetail[i].classList.add("hidden");
     layout.classList.add("hidden");
+    document.body.style.overflow = "";
   }
 
   function hiddenEsc(e) {

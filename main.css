@@ -540,8 +540,8 @@ header {
   justify-content: center;
   width: 100%;
   flex-wrap: wrap;
-  padding-top: 1rem;
-  padding-bottom: 3rem;
+  /* padding-top: 1rem; */
+  /* padding-bottom: 3rem; */
   background-color: white;
   height: 100vh;
 }
@@ -688,9 +688,12 @@ header {
   top: 0;
   transform: translateX(30%) translateY(-30%);
   font-size: 2rem;
-  padding: 1px 8px;
+  padding: 0px 8px;
   color: var(--color-dark);
   border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* -- Contact -- */
